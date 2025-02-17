@@ -12,12 +12,19 @@ body {
 }
 
 /* MARK: Navbar Styling */
+
+/* Make Navbar Sticky */
+
 .navbar {
+	position: sticky;
+	z-index: 1000;
+	top: 0;
 	border-bottom: 2px solid #6c0d0f;
 	background: linear-gradient(90deg, #e6cdd9 0%, #ffffff 100%);
 	display: flex;
 	align-items: center;
 	padding: 0.5rem 1rem;
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* ✅ Logo */
@@ -306,6 +313,94 @@ body {
 .contact-info .phone-icon {
 	width: 18px;
 	margin-right: 4px;
+}
+
+/* MARK: Product Section*/
+/* Products Section */
+.section-title {
+	font-size: 2rem;
+	font-weight: bold;
+	color: #260b1f;
+}
+
+.section-subtitle {
+	font-size: 1rem;
+	color: #635682;
+	margin-bottom: 20px;
+}
+
+/* Product Card Styling */
+.product-card {
+	border: none;
+	border-radius: 10px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	background: linear-gradient(to top, white 50%, #e4c9d6 50%);
+	transition: transform 0.2s ease-in-out;
+}
+
+.product-card:hover {
+	transform: translateY(-5px);
+}
+
+.product-card:nth-child(even) {
+	background: linear-gradient(to top, white 50%, #c8bfdf 50%);
+}
+
+/* Product Image */
+.product-image img {
+	width: 80%;
+	margin-top: 20px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+/* Product Details */
+.product-title {
+	font-size: 1rem;
+	color: #260b1f;
+	font-weight: bold;
+	margin-top: 10px;
+}
+
+.price {
+	font-size: 1rem;
+	font-weight: bold;
+	color: #6c0d0f;
+}
+
+/* Buttons */
+.discover-btn,
+.order-btn {
+	background: white;
+	color: black;
+	border: 1px solid #b77093;
+	border-radius: 5px;
+	padding: 5px 10px;
+	margin: 5px;
+	font-size: 0.9rem;
+	transition: background 0.3s ease-in-out;
+}
+
+.discover-btn:hover,
+.order-btn:hover {
+	background: #b77093;
+	color: white;
+}
+
+/* More Pies Button */
+.more-pies-btn {
+	background-color: #bdb2d8;
+	color: black;
+	border: 1px solid #b77093;
+	border-radius: 10px;
+	padding: 12px 20px;
+	font-size: 1rem;
+	transition: background 0.3s ease-in-out;
+}
+
+.more-pies-btn:hover {
+	background-color: #a392c7;
+	color: white;
 }
 
 /* MARK: Responsive Design */

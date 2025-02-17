@@ -1,67 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>McNamaraPieCo</title>
-  <link rel="stylesheet" href="../css/styles.css">
-  <!-- FONT TO GET THE FACEBOOK AND INSTAGRAM ICON -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-</head>
-<body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>McNamara Pie Co.</title>
 
-<nav class="navbar">
-  <div class="container">
-    <!-- Logo -->
-    <div class="logo"><img src="Images/logo.42.00.jpeg" alt="McNamaraPieCo logo"></div>
+		<!-- Bootstrap CSS -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+		/>
 
-    <!-- Navigation Links -->
-    <ul class="nav-links">
-      <li><a href="#home" >Home</a></li>
-      <li><a href="#products">Products</a></li>
-      <li><a href="#about">About Me</a></li>
-      <li><a href="#features">Feature Treats</a></li>
-      <li><a href="#testimonials">Testimonials</a></li>
-      <li><a href="#order">Place Order</a></li>
-    </ul>
+		<!-- Google Font: Lora -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
 
-    <!-- Social Media Icons -->
-    <div class="social-icons">
-      <a href="#"><i class="fab fa-facebook-f"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-    </div>
-  </div>
-</nav>
-<!-- Sections -->
-<section id="home">
-  <h1>Welcome to McNamaraPieCo</h1>
-  <p>Delicious homemade pies made with love!</p>
-</section>
+		<!-- Custom Styles -->
+		<link rel="stylesheet" href="../css/styles.css" />
+	</head>
+	<body>
+		<!-- MARK: Fixed Navbar -->
+		<nav class="navbar navbar-expand-lg">
+			<!-- Logo -->
+			<a class="navbar-brand" href="#">
+				<img src="./Images/logo.42.00.jpeg" alt="Logo" style="height: 50px" />
+			</a>
 
-<section id="products">
-  <h2>Our Products</h2>
-  <p>Check out our amazing selection of pies.</p>
-</section>
+			<!-- ✅ Mobile Toggle Button (Fix) -->
+			<button
+				class="navbar-toggler"
+				type="button"
+				data-toggle="collapse"
+				data-target="#navbarNav"
+				aria-controls="navbarNav"
+				aria-expanded="false"
+				aria-label="Toggle navigation"
+			>
+				<span class="navbar-toggler-icon"></span>
+			</button>
 
-<section id="about">
-  <h2>About Me</h2>
-  <p>Learn about our story and passion for baking.</p>
-</section>
+			<!-- ✅ Add ID to Collapse Div -->
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav mx-auto">
+					<li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">Products</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">About Me</a></li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Feature Treats</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Testimonials</a>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="#">Place Order</a></li>
+				</ul>
 
-<section id="features">
-  <h2>Feature Treats</h2>
-  <p>Discover our limited-time specialty treats.</p>
-</section>
+				<!-- Social Icons -->
+				<div class="social-icons d-flex">
+					<a
+						href="https://www.facebook.com"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<img
+							src="./Images/navBarImages/Socmed/Facebook.png"
+							alt="Facebook"
+						/>
+					</a>
+					<a
+						href="https://www.instagram.com"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<img
+							src="./Images/navBarImages/Socmed/Instagram.png"
+							alt="Instagram"
+						/>
+					</a>
+				</div>
+			</div>
+		</nav>
 
-<section id="testimonials">
-  <h2>What Our Customers Say</h2>
-  <p>Read reviews from our happy customers.</p>
-</section>
+		<!-- Hero Section -->
+		<section class="hero">
+			<div class="container text-center">
+				<!-- Header Text with Cherries and Underline -->
+				<div class="hero-header">
+					<h1 class="hero-title">
+						<img
+							src="./Images/mainImages/cherry.png"
+							alt="Cherry"
+							class="cherry-icon"
+						/>
+						<span class="line1"
+							>Homemade Pies, <span class="baked">Baked</span></span
+						><br />
+						<span class="line2"
+							>With <span class="love">Love</span>, Perfect For</span
+						><br />
+						<span class="line3"
+							>Your <span class="family">Family</span> Table!</span
+						>
+						<img
+							src="./Images/mainImages/Ellipse.png"
+							alt="Underline"
+							class="underline-icon"
+						/>
+					</h1>
+				</div>
+			</div>
 
-<section id="order">
-  <h2>Place an Order</h2>
-  <p>Order your favorite pies online!</p>
-</section>
+			<div class="hero-buttons">
+				<a href="#" class="btn shop-now">Shop Now</a>
+				<a href="#" class="btn discover-pies">Discover Pies</a>
+			</div>
 
-</body>
+			<!-- Quote -->
+			<p class="hero-quote">
+				"Pie makes everybody happy!" - Laurie Halse Anderson
+			</p>
+
+			<!-- Left Side Image -->
+			<div class="left-side-image">
+				<img
+					src="./Images/mainImages/RightSidePic.png"
+					alt="Pie with Crumbs"
+					class="left-pie"
+				/>
+			</div>
+
+			<!-- Right Side -->
+			<div class="right-side">
+				<!-- Right Side Image -->
+				<div class="right-side-image">
+					<img
+						src="./Images/mainImages/LeftSidePic.png"
+						alt="Apple Pie with Strawberries"
+						class="right-pie"
+					/>
+
+					<!-- Contact Information (Now Correctly Positioned) -->
+					<div class="contact-info">
+						<p class="email">mcnamarapieco@gmail.com</p>
+						<p class="phone">
+							<img
+								src="./Images/mainImages/Phone.png"
+								alt="Phone Icon"
+								class="phone-icon"
+							/>
+							519-919-2285
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!--  Correct Bootstrap JS (Placed at the end of <body>) -->
+		<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.4/dist/umd/popper.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
+	</body>
 </html>

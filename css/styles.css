@@ -1,17 +1,16 @@
-/* Reset styling */
+/* MARK: - Reset styling */
 * {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
 }
 html {
+	font-family: "Lora", serif;
 	scroll-behavior: smooth;
 	scroll-padding-top: 120px;
 }
-body {
-	font-family: "Lora", serif;
-}
-/* Header / Nav */
+
+/* MARK: - Header/Navigation */
 header {
 	padding: 10px 20px;
 	background-image: linear-gradient(rgba(232, 223, 246, 0.9), #fde5e5);
@@ -20,7 +19,7 @@ header {
 	align-items: center;
 	justify-content: space-between;
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-	border-bottom: 4px solid #5B2245;
+	border-bottom: 4px solid #5b2245;
 	position: fixed;
 	top: 0;
 	width: 100%;
@@ -36,14 +35,12 @@ header {
 	margin: 10px;
 }
 
-/* Navigation */
 nav {
 	display: flex;
 	align-items: center;
 	gap: 20px;
 }
 
-/* Navigation List */
 nav ul {
 	list-style: none;
 	display: flex;
@@ -53,18 +50,23 @@ nav ul {
 }
 
 nav ul li {
+	padding: 5px 10px;
 	transition: transform 0.3s;
 }
 
 nav ul li a {
-	color: #5B2245; /* Purple text */
+	color: #5b2245; /* Purple text */
 	text-decoration: none;
 	font-weight: bold;
-	padding: 5px 10px;
+	margin-left: 10px;
 }
 
 nav ul li:hover {
-	transform: scale(1.1);
+	background-image: linear-gradient(to right, transparent, rgb(245, 240, 253), transparent);
+	border-radius: 25px;
+	transform: scale(1.05);
+	transition: all 0.2s ease-in-out;
+	/*box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);*/
 }
 
 /* Social Icons */
@@ -76,9 +78,10 @@ nav ul li:hover {
 
 .social-icons a {
 	text-decoration: none;
-	background: #5B2245; /* Purple Background */
+	background: #5b2245; /* Purple Background */
 	color: white;
 	border-radius: 50%;
+	margin-left: 10px;
 	width: 40px;
 	height: 40px;
 	display: flex;
@@ -92,31 +95,31 @@ nav ul li:hover {
 	transform: scale(1.1);
 }
 
-#hamburger-icon{
+#hamburger-icon {
 	margin: auto 0;
 	display: none;
 	cursor: pointer;
 }
 
-#hamburger-icon div{
+#hamburger-icon div {
 	width: 35px;
 	height: 3px;
-	background-color: #5B2245;
+	background-color: #5b2245;
 	margin: 6px 0;
 	transition: 0.4s;
 }
-.open .bar1{
+.open .bar1 {
 	-webkit-transform: rotate(-45deg) translate(-6px, 6px);
 	transform: rotate(-45deg) translate(-6px, 6px);
 }
-.open .bar2{
+.open .bar2 {
 	opacity: 0;
 }
-.open .bar3{
+.open .bar3 {
 	-webkit-transform: rotate(45deg) translate(-6px, -8px);
 	transform: rotate(45deg) translate(-6px, -8px);
 }
-.open .mobile-menu{
+.open .mobile-menu {
 	display: flex;
 	flex-direction: column;
 	align-content: center;
@@ -129,7 +132,7 @@ nav ul li:hover {
 	top: 100%;
 	left: 0;
 	width: 100%;
-	background-image: linear-gradient(to top,rgba(232, 223, 246, 0.9), #fde5e5);
+	background-image: linear-gradient(to top, rgba(232, 223, 246, 0.9), #fde5e5);
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 	flex-direction: column;
 	align-items: center;
@@ -142,7 +145,7 @@ nav ul li:hover {
 	text-align: center;
 }
 .mobile-menu li a {
-	color: #5B2245;
+	color: #5b2245;
 	text-decoration: none;
 	font-weight: bold;
 	display: block;
@@ -150,8 +153,10 @@ nav ul li:hover {
 	padding: 5px 10px;
 }
 .mobile-menu li a:hover {
-	transform: scale(1.1);
-	transition-duration: 0.5s;
+	background-image: linear-gradient(to right, transparent, rgb(245, 240, 253), transparent);
+	border-radius: 25px;
+	transform: scale(1.05); /* Reduced scale effect for a subtler animation */
+	transition: all 0.2s ease-in-out; /* Slowed down transition and added easing */
 }
 
 .mobile-menu .social-icons {
@@ -164,7 +169,7 @@ nav ul li:hover {
 .mobile-menu .social-icons a {
 	width: 35px;
 	height: 35px;
-	background: #5B2245; /* Same purple background */
+	background: #5b2245; /* Same purple background */
 	color: white;
 	display: flex;
 	align-items: center;
@@ -173,40 +178,47 @@ nav ul li:hover {
 	text-decoration: none;
 }
 
-
 /* sections */
 section {
 	margin-top: 120px;
 	font-size: 40px;
 	justify-content: center;
 }
-/* ✅ MARK: Hero Section */
+
+/* MARK: Hero Section */
+/* Hero Section */
 .hero {
 	position: relative;
 	text-align: center;
 	padding: 5rem 0;
 	background-image: url("../public/Images/mainImages/BackgtoundGradiendt.png");
-	background-size: cover;
-	background-position: center;
+	background-size: 100% auto; /* Ensures full width */
+	background-position: top center;
 	background-repeat: no-repeat;
-	min-height: 100vh;
+	min-height: 120vh; /* Makes sure the section covers the full viewport */
 }
 
-/* ✅ Hero Header */
+/*  Hero Header */
 .hero-header {
 	position: relative;
 	display: inline-block;
 }
 
-/* ✅ Heading Styles */
+/* Heading Styles */
 .hero-header h1 {
-	font-size: 3rem;
+	font-size: 2.5rem;
 	font-weight: bold;
 	color: #260b1f;
-	line-height: 1.2;
+}
+
+.hero-title {
+	font-size: 2.8rem;
+	font-weight: 700;
+	text-align: center;
+	color: #260b1f;
 	position: relative;
+	line-height: 1.2;
 	display: inline-block;
-	margin-top: 40px; /* Default positioning */
 }
 
 .hero-title .baked {
@@ -224,7 +236,7 @@ section {
 	font-weight: bold;
 }
 
-/* ✅ Icons in H1 */
+/* Cherry Icon Position */
 .cherry-icon {
 	position: absolute;
 	left: -40px;
@@ -233,15 +245,44 @@ section {
 	height: auto;
 }
 
+/* Underline Icon */
 .underline-icon {
 	position: absolute;
-	right: -5px;
-	bottom: 1px;
+	right: -50px;
+	bottom: 5px;
 	width: 80px;
 	height: auto;
 }
 
-/* ✅ Hero Buttons */
+/*  Highlighted Text Colors */
+.highlight {
+	color: #6c0d0f;
+	font-weight: bold;
+}
+.highlight-red {
+	color: red;
+}
+.highlight-purple {
+	color: #7e57c2;
+}
+
+/*  Cherry Image */
+.cherry-img {
+	position: absolute;
+	top: -40px;
+	left: -30px;
+	width: 50px;
+}
+
+/*  Underline Icon */
+.underline-icon {
+	position: absolute;
+	right: -28px;
+	bottom: 88px;
+	width: 80px;
+	height: auto;
+}
+/* Button Container */
 .hero-buttons {
 	display: flex;
 	gap: 15px;
@@ -249,33 +290,39 @@ section {
 	margin-top: 20px;
 }
 
-.hero-buttons a {
-	text-decoration: none;
-	padding: 12px 24px;
-	border-radius: 10px;
-	font-size: 1rem;
-	font-weight: 200;
-	display: inline-block;
-}
-
+/* Shop Now Button */
 .shop-now {
 	background: #d9a5b0; /* Light pink */
 	color: #260b1f;
-	border: 1px solid #5c0d0f;
+	font-size: 1rem;
+	font-weight: 200;
+	padding: 12px 24px;
+	border-radius: 25px 10px 10px 10px; /* Rounded on the left */
+	border: 1px solid #5c0d0f; /* Dark border */
+	text-decoration: none;
+	display: inline-block;
 }
 
+/* Discover Pies Button */
 .discover-pies {
 	background: transparent;
 	color: #260b1f;
-	border: 1px solid #260b1f;
+	font-size: 1rem;
+	font-weight: 200;
+	padding: 12px 24px;
+	border-radius: 10px;
+	border: 1px solid #260b1f; /* Dark border */
+	text-decoration: none;
+	display: inline-block;
 }
 
+/* Hover Effects */
 .shop-now:hover,
 .discover-pies:hover {
 	opacity: 0.85;
 }
 
-/* ✅ Quote */
+/* Quote Styling */
 .hero-quote {
 	font-size: 1.2rem;
 	font-style: italic;
@@ -284,32 +331,35 @@ section {
 	margin-top: 15px;
 }
 
-/* ✅ Images Positioning */
-.left-side-image,
+/* Left Side Image */
+.left-side-image {
+	position: absolute;
+	left: 8%;
+	top: 50%;
+	transform: translateY(-50%);
+	max-width: 408px;
+}
+
+.left-side-image img {
+	width: 100%;
+	height: auto;
+}
+
+/* Right Side Image */
 .right-side-image {
 	position: absolute;
-	transform: translateY(-50%);
-	max-width: 400px;
-}
-
-.left-side-image {
-	left: 5%;
-	top: 60%;
-}
-
-.right-side-image {
 	right: 0%;
 	top: 36%;
+	transform: translateY(-50%);
+	max-width: 440px;
 }
 
-/* ✅ Images */
-.left-side-image img,
 .right-side-image img {
 	width: 100%;
 	height: auto;
 }
 
-/* ✅ Contact Info */
+/*  Contact Info (Properly Aligned) */
 .contact-info {
 	font-size: 1rem;
 	color: #260b1f;
@@ -317,6 +367,7 @@ section {
 	margin-top: -100px;
 }
 
+/* Email */
 .contact-info .email {
 	font-weight: 200;
 	font-size: 1rem;
@@ -324,6 +375,7 @@ section {
 	margin-bottom: 5px;
 }
 
+/* Phone */
 .contact-info .phone {
 	display: flex;
 	align-items: center;
@@ -333,39 +385,96 @@ section {
 	margin-top: -5px;
 }
 
+/* Phone Icon */
 .contact-info .phone-icon {
 	width: 18px;
 	margin-right: 4px;
 }
 
+/* MARK: Media queries  for HERO */
+/* ✅ Tablets (max-width: 1024px) */
+@media (max-width: 1024px) {
+	.hero {
+		background-image: url("../public/Images/mainImages/BackgtoundGradiendt.png");
+		background-size: cover;
+		background-position: center 90%; /* Moves the curve down */
+	}
 
-/* About me*/
+	.left-side-image {
+		display: none; /* Hide left-side image */
+	}
+
+	.right-side-image img {
+		display: none; /* Hide right-side image */
+	}
+
+	.contact-info {
+		display: none; /* Hide contact info */
+	}
+}
+
+/* ✅ Mobile Phones (max-width: 768px) */
+@media (max-width: 768px) {
+	.hero {
+		background-image: url("../public/Images/mainImages/BackgtoundGradiendt.png");
+		background-size: cover;
+		background-position: center 95%; /* Moves the curve even lower */
+	}
+
+	.left-side-image {
+		display: none; /* Hide left-side image */
+	}
+
+	.right-side-image img {
+		display: none; /* Hide right-side image */
+	}
+
+	.contact-info {
+		display: none; /*  Hide contact info */
+	}
+}
+
+/* Small Phones (max-width: 480px) */
+@media (max-width: 480px) {
+	.hero {
+		background-image: url("../public/Images/mainImages/BackgtoundGradiendt.png");
+		background-size: cover;
+		background-position: center 98%; /* Moves the curve even lower */
+	}
+
+	.left-side-image {
+		display: none; /* Hide left-side image */
+	}
+
+	.right-side-image img {
+		display: none; /* Hide right-side image */
+	}
+
+	.contact-info {
+		display: none; /*  Hide contact info */
+	}
+}
+
+/* MARK: End of the Hero section*/
+
+/*About me*/
 .container {
-	/* Set the height to ensure the image is visible at the bottom */
-	height: 100vh;  /* Full viewport height, adjust if needed */
-	background-size: cover; /* Ensures full coverage */
+	position: relative;
+	text-align: center;
+	background-image: url("../public/Images/ImagesAboutMe/AboutMe.jpg");
+	background-size: cover;
 	background-position: center bottom; /* Positions the image at the bottom */
-	background-repeat: no-repeat; /* Prevents repeating the background */
-	background-attachment: fixed; /* Keeps image fixed when scrolling */
-	background-image: url('../public/Images/ImagesAboutMe/AboutMe.jpg');
-	margin: 0;
-	padding: 0;
+	background-repeat: no-repeat;
+	min-height: 90vh;
 }
 
-#about {
-	position: relative;
-	z-index: 1;
-}
 
 .about-heading {
 	font-size: 36px;
 	color: #5a2a6f;
-	font-family: "Abril Fatface", cursive;
 	text-align: center;
 	width: 100%;
-	margin-top: 30px; /* Adjusts spacing at the top */
 }
-
 
 .about-container {
 	position: relative;
@@ -375,22 +484,18 @@ section {
 	padding: 50px;
 }
 
-
-
 .about-text {
 	max-width: 50%;
 	padding: 20px;
 	text-align: left;
 }
 
-
 .about-text h2 {
 	font-size: 32px;
 	color: #5a2a6f;
-	font-family: "Abril Fatface", cursive;
 	text-align: center;
 	width: 100%;
-	margin-top: 20px; /* Adjusts spacing at the top */
+	margin-top: 0; /* Adjusts spacing at the top */
 }
 
 .about-text p {
@@ -399,7 +504,6 @@ section {
 	line-height: 1.6;
 	text-align: left;
 }
-
 
 .about-image {
 	position: absolute;
@@ -414,26 +518,14 @@ section {
 }
 
 
-.footer {
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-	text-align: center;
-	padding: 60px 20px 20px; /* Keeps text spacing nice */
-	font-size: 18px;
-	color: #5a2a6f;
-	font-family: "Lora", serif;
-}
-
-
 /* PRODUCTS SECTION */
-#products{
+#products {
 	text-align: center;
-	margin-top: 1em
+	margin-top: 1em;
 }
 
-#products h2{
-	margin-bottom: 0
+#products h2 {
+	margin-bottom: 0;
 }
 
 #product-container {
@@ -444,7 +536,6 @@ section {
 	margin: 0 auto; /* Centers the container horizontally */
 	max-width: 1200px; /* Optional: Adds a max-width so it doesn't stretch too much */
 }
-
 
 .product-row {
 	display: grid;
@@ -461,7 +552,7 @@ section {
 }
 
 .product:nth-child(even) {
-	background: linear-gradient(to top, white 50%, #C8BFDF 50%);
+	background: linear-gradient(to top, white 50%, #c8bfdf 50%);
 }
 
 .product:nth-child(odd) {
@@ -474,15 +565,15 @@ section {
 
 .product h3 {
 	margin-top: 10px;
-	font-size: .7em;
-	text-align:left;
+	font-size: 0.7em;
+	text-align: left;
 }
 
 .price {
-	font-size: .8em;
+	font-size: 0.8em;
 	color: #333;
 	margin: 10px 0;
-	text-align:left;
+	text-align: left;
 	font-weight: bold;
 }
 
@@ -515,84 +606,130 @@ section {
 	cursor: pointer; /* Shows a pointer when hovered */
 }
 
-.products-discover-button button:hover, .products-placeOrder-button button:hover {
+.products-discover-button button:hover,
+.products-placeOrder-button button:hover {
 	background-color: #218838;
 }
 /* testimonials section */
 
 .testimonials {
 	text-align: center;
-	padding: 80px 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Scrolling container */
+.scroller {
+	overflow: hidden;
+	max-width: 800px;
+	position: relative;
+}
+
+
+/* Infinite scrolling effect */
+.scroller__inner {
+	padding-block: 1rem;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+}
+.scroller[data-animated="true"]{
+	overflow: hidden;
+	mask: linear-gradient(
+			90deg,
+			transparent,
+			white 10%,
+			white 90%,
+			transparent
+	);
+}
+.scroller[data-animated="true"] .scroller__inner {
+	width: max-content;
+	flex-wrap: nowrap;
+	display: flex;
+	animation: scroll 50s linear infinite;
+}
+/* Individual testimonial card */
+.testimonial-card {
 	background: white;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	padding: 1rem;
+	width: 250px;
+	box-shadow: 0 0.5rem 1rem -0.25rem rgba(0, 0, 0, 0.1);
+	margin: 0 auto;
+	transition: transform 0.3s ease-in-out;
+	text-align: center;
 }
 
 .section-title {
-	font-size: 14px;
 	text-transform: uppercase;
 	color: gray;
 	margin-bottom: 10px;
+	font-size: 36px;
+	color: #5a2a6f;
+	text-align: center;
+	width: 100%;
+	margin-top: 30px;
+
 }
 
 .main-title {
 	font-size: 24px;
 	font-weight: bold;
-	color: #5B2245;
+	color: #5b2245;
 	margin-bottom: 40px;
 }
 
-.testimonial-container {
-	display: flex;
-	justify-content: center;
-	gap: 20px;
-}
 
-.testimonial-card {
-	background: white;
-	border: 1px solid #ddd;
-	border-radius: 10px;
-	padding: 20px;
-	width: 300px;
-	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.testimonials h4{
+	font-size: 30px;
 }
 
 .testimonial-img {
-	width: 80px;
-	height: 80px;
-	border-radius: 50%;
-	margin-bottom: 10px;
+	width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 10px;
 }
 
 .stars {
-	color: #FFA500;
+	color: #ffa500;
 	font-size: 18px;
 	margin-bottom: 10px;
 }
-.footer {
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-	text-align: center;
-	padding: 60px 20px 20px; /* Keeps text spacing nice */
-	font-size: 18px;
-	color: #5a2a6f;
-	font-family: "Lora", serif;
+
+.testimonials p {
+    font-size: 16px;
+    text-align: center;
+    margin-top: 10px;
 }
 
-@media only screen and (max-width: 1000px) {
-	header {
-	justify-content: space-between;
+
+@keyframes scroll {
+	to {
+		transform: translate(calc(-50% - 0.5rem));
 	}
-	header nav{
+}
+
+@media only screen and (max-width: 1024px) {
+	header {
+		justify-content: space-between;
+	}
+	header nav {
 		display: none;
 	}
-	#hamburger-icon{
+	#hamburger-icon {
 		display: block;
 	}
 	.mobile-heading {
 		display: block;
 		text-align: center;
 		font-size: 24px;
-		color: #5B2245;
+		color: #5b2245;
 	}
 }
 @media (max-width: 768px) {
@@ -601,156 +738,8 @@ section {
 		text-align: center;
 	}
 
-	.about-text, .about-image {
+	.about-text,
+	.about-image {
 		max-width: 100%;
-	}
-}
-/* ✅ MARK: Responsive Design */
-
-/* 🟢 Tablets (max-width: 1024px) */
-@media (max-width: 1024px) {
-	/* ✅ Adjust H1 size and spacing */
-	.hero-header h1 {
-		font-size: 2.5rem;
-		margin-top: 60px; /* Move H1 down */
-	}
-
-	/* ✅ Hide Left-side image */
-	.left-side-image {
-		display: none;
-	}
-
-	/* ✅ Ensure Right-side image stays */
-	.right-side-image {
-		position: static;
-		text-align: center;
-		margin: 20px auto;
-		max-width: 300px;
-		display: block;
-	}
-
-	.right-side-image img {
-		width: 90%;
-	}
-}
-
-/* 🟡 Large Phones (max-width: 768px) */
-@media (max-width: 768px) {
-	/* ✅ Adjust H1 size and spacing */
-	.hero-header h1 {
-		font-size: 2rem;
-		margin-top: 70px; /* Move H1 further down */
-	}
-
-	/* ✅ Hide Left-side image */
-	.left-side-image {
-		display: none;
-	}
-
-	/* ✅ Ensure Right-side image stays */
-	.right-side-image {
-		position: static;
-		text-align: center;
-		margin: 15px auto;
-		max-width: 280px;
-		display: block;
-	}
-
-	.right-side-image img {
-		width: 85%;
-	}
-
-	/* ✅ Adjust buttons */
-	.hero-buttons {
-		display: flex;
-		justify-content: center;
-		gap: 12px;
-		margin-top: 20px;
-	}
-
-	.hero-buttons a {
-		padding: 10px 20px;
-		font-size: 1rem;
-		width: auto;
-	}
-
-	/* ✅ Adjust quote */
-	.hero-quote {
-		font-size: 1rem;
-		padding: 0 10px;
-	}
-}
-
-/* 🔴 Small Phones (max-width: 480px) */
-@media (max-width: 480px) {
-	/* ✅ Adjust H1 size and spacing */
-	.hero-header h1 {
-		font-size: 1.8rem;
-		margin-top: 80px;
-		line-height: 1.3;
-		text-align: center;
-	}
-
-	/* ✅ Hide Left-side image */
-	.left-side-image {
-		display: none;
-	}
-
-	/* ✅ Ensure Right-side image stays */
-	.right-side-image {
-		position: static;
-		text-align: center;
-		margin: 10px auto;
-		max-width: 250px;
-		display: block;
-	}
-
-	.right-side-image img {
-		width: 80%;
-	}
-
-	/* ✅ Center and style contact details */
-	.contact-info {
-		text-align: center;
-		margin-top: 20px;
-	}
-
-	.contact-info .email {
-		font-size: 1.2rem;
-		color: #635682;
-		font-weight: bold;
-		text-decoration: underline;
-	}
-
-	.contact-info .phone {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		font-size: 1.2rem;
-		color: #635682;
-		margin-top: 5px;
-	}
-
-	.contact-info .phone-icon {
-		width: 20px;
-		margin-right: 5px;
-	}
-
-	/* ✅ Maintain the curved bottom effect */
-	.hero {
-		position: relative;
-		padding-bottom: 4rem;
-	}
-
-	.hero::after {
-		content: "";
-		position: absolute;
-		width: 100%;
-		height: 50px;
-		background: url("../public/Images/mainImages/curved-bottom.png") no-repeat
-		center bottom;
-		background-size: cover;
-		bottom: 0;
-		left: 0;
 	}
 }

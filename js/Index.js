@@ -5,16 +5,16 @@ function toggleMobileMenu(menu) {
 
 function toggleHeading() {
 const heading = document.getElementById("responsive-heading");
-if (window.innerWidth <= 1000 && window.innerWidth >= 400) {
+if (window.innerWidth <= 1024 && window.innerWidth >= 400) {
 heading.style.display = "block";
 heading.style.textAlign = "center";
 heading.style.fontSize = "32px";
 heading.style.color = "#5B2245";
 heading.style.fontWeight = "bold";
-heading.style.marginTop = "20px";
+heading.style.marginRight = "20px";
 heading.style.padding = "10px";
 heading.style.width = "80%";
-heading.style.margin = "20px auto";
+heading.style.margin = "0 auto";
 } else {
 heading.style.display = "none";
 }
@@ -23,3 +23,24 @@ heading.style.display = "none";
 window.addEventListener("resize", toggleHeading);
 toggleHeading(); // Run on page load
 
+const scrollers = document.querySelectorAll('.scroller');
+
+function addAnimation() {
+    scrollers.forEach(scroller => {
+        scroller.setAttribute("data-animated", true);
+
+        const scrollerInner = scroller.querySelector('.scroller__inner');
+        const scrollerContent = Array.from(scrollerInner.children);
+
+        // Duplicate content to create an infinite loop effect
+        scrollerContent.forEach(item => {
+            const duplicatedItem = item.cloneNode(true);
+            duplicatedItem.setAttribute('aria-hidden', true);
+            scrollerInner.appendChild(duplicatedItem);
+        });
+    });
+}
+
+if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    addAnimation();
+}

@@ -1,305 +1,297 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>McNamaraPieCo</title>
-	<link rel="stylesheet" href="../css/styles.css">
-	<!-- Google Font: Lora -->
-	<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet"/>
-	<!-- FONT TO GET THE FACEBOOK AND INSTAGRAM ICON -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-</head>
-<body>
-
-<!-- header -->
-<header>
-	<div class="logo"><img src="Images/logo.42.00.jpeg" alt="McNamaraPieCo logo"></div>
-	<h1 id="responsive-heading" style="display: none;">McNamaraPieCo</h1>
-	<nav>
-		<!-- Navigation Links -->
-		<ul>
-			<li><a href="#home" >Home</a></li>
-			<li><a href="#products">Products</a></li>
-			<li><a href="#about">About Me</a></li>
-			<li><a href="#features">Feature Treats</a></li>
-			<li><a href="#testimonials">Testimonials</a></li>
-			<li><a href="#order">Place Order</a></li>
-		</ul>
-
-		<!-- Social Media Icons -->
-		<div class="social-icons">
-			<a href="#"><i class="fab fa-facebook-f"></i></a>
-			<a href="#"><i class="fab fa-instagram"></i></a>
-		</div>
-	</nav>
-	<div id="hamburger-icon" onclick="toggleMobileMenu(this)">
-		<div class="bar1"></div>
-		<div class="bar2"></div>
-		<div class="bar3"></div>
-		<ul class="mobile-menu">
-			<li><a href="#home" >Home</a></li>
-			<li><a href="#products">Products</a></li>
-			<li><a href="#about">About Me</a></li>
-			<li><a href="#features">Feature Treats</a></li>
-			<li><a href="#testimonials">Testimonials</a></li>
-			<li><a href="#order">Place Order</a></li>
-			<li class="social-icons">
-				<a href="#"><i class="fab fa-facebook-f"></i></a>
-				<a href="#"><i class="fab fa-instagram"></i></a>
-			</li>
-		</ul>
-	</div>
-
-</header>
-<!-- Sections -->
-<section id="home">
-	<!-- MARK: Hero Section -->
-	<section class="hero" id="hero">
-		<div class="container text-center">
-			<!-- Header Text with Cherries and Underline -->
-			<div class="hero-header">
-				<h1 class="hero-title">
-					<img
-							src="./Images/mainImages/cherry.png"
-							alt="Cherry"
-							class="cherry-icon"
-					/>
-					<span class="line1"
-					>Homemade Pies, <span class="baked">Baked</span></span
-					><br />
-					<span class="line2"
-					>With <span class="love">Love</span>, Perfect For</span
-					><br />
-					<span class="line3"
-					>Your <span class="family">Family</span> Table!</span
-					>
-					<img
-							src="./Images/mainImages/Ellipse.png"
-							alt="Underline"
-							class="underline-icon"
-					/>
-				</h1>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>McNamaraPieCo</title>
+		<link rel="stylesheet" href="../css/styles.css" />
+		<!-- Google Font: Lora -->
+		<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet"/>
+		<!-- FONT TO GET THE FACEBOOK AND INSTAGRAM ICON -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+	</head>
+	<body>
+		<!-- header -->
+		<header>
+			<div class="logo">
+				<img src="Images/logo.42.00.jpeg" alt="McNamaraPieCo logo" />
 			</div>
-		</div>
+			<h1 id="responsive-heading" style="display: none">McNamaraPieCo</h1>
+			<nav>
+				<!-- Navigation Links -->
+				<ul>
+					<li><a href="#home">Home</a></li>
+					<li><a href="#products">Products</a></li>
+					<li><a href="#about">About Me</a></li>
+					<li><a href="#features">Feature Treats</a></li>
+					<li><a href="#testimonials">Testimonials</a></li>
+					<li><a href="#order">Place Order</a></li>
+				</ul>
 
-		<div class="hero-buttons">
-			<a href="#" class="btn shop-now">Shop Now</a>
-			<a href="#" class="btn discover-pies">Discover Pies</a>
-		</div>
+				<!-- Social Media Icons -->
+				<div class="social-icons">
+					<a href="#"><i class="fab fa-facebook-f"></i></a>
+					<a href="#"><i class="fab fa-instagram"></i></a>
+				</div>
+			</nav>
+			<div id="hamburger-icon" onclick="toggleMobileMenu(this)">
+				<div class="bar1"></div>
+				<div class="bar2"></div>
+				<div class="bar3"></div>
+				<ul class="mobile-menu">
+					<li><a href="#home">Home</a></li>
+					<li><a href="#products">Products</a></li>
+					<li><a href="#about">About Me</a></li>
+					<li><a href="#features">Feature Treats</a></li>
+					<li><a href="#testimonials">Testimonials</a></li>
+					<li><a href="#order">Place Order</a></li>
+					<li class="social-icons">
+						<a href="#"><i class="fab fa-facebook-f"></i></a>
+						<a href="#"><i class="fab fa-instagram"></i></a>
+					</li>
+				</ul>
+			</div>
+		</header>
 
-		<!-- Quote -->
-		<p class="hero-quote">
-			"Pie makes everybody happy!" - Laurie Halse Anderson
-		</p>
+		<!-- MARK: Hero Section -->
+		<section class="hero" id="home">
+			<div class="hero-container text-center">
+				<!-- Header Text with Cherries and Underline -->
+				<div class="hero-header">
+					<h1 class="hero-title">
+						<img src="./Images/mainImages/cherry.png" alt="Cherry" class="cherry-icon"/>
+						<span class="line1">Homemade Pies, <span class="baked">Baked</span></span><br />
+						<span class="line2">With <span class="love">Love</span>, Perfect For</span><br />
+						<span class="line3">Your <span class="family">Family</span> Table!</span>
+						<img src="./Images/mainImages/Ellipse.png" alt="Underline" class="underline-icon"/>
+					</h1>
+				</div>
 
-		<!-- Left Side Image -->
-		<div class="left-side-image">
-			<img
-					src="./Images/mainImages/RightSidePic.png"
-					alt="Pie with Crumbs"
-					class="left-pie"
-			/>
-		</div>
+				<!-- Hero Buttons -->
+				<div class="hero-buttons">
+					<a href="#" class="btn shop-now">Shop Now</a>
+					<a href="#" class="btn discover-pies">Discover Pies</a>
+				</div>
 
-		<!-- Right Side -->
-		<div class="right-side">
-			<!-- Right Side Image -->
-			<div class="right-side-image">
-				<img
-						src="./Images/mainImages/LeftSidePic.png"
-						alt="Apple Pie with Strawberries"
-						class="right-pie"
-				/>
+				<!-- Quote -->
+				<p class="hero-quote">
+					"Pie makes everybody happy!" - Laurie Halse Anderson
+				</p>
+			</div>
 
-				<!-- Contact Information (Now Correctly Positioned) -->
-				<div class="contact-info">
-					<p class="email">mcnamarapieco@gmail.com</p>
-					<p class="phone">
-						<img
-								src="./Images/mainImages/Phone.png"
-								alt="Phone Icon"
-								class="phone-icon"
-						/>
-						519-919-2285
-					</p>
+			<!-- Left Side Image -->
+			<div class="left-side-image">
+				<img src="./Images/mainImages/RightSidePic.png" alt="Pie with Crumbs" class="left-pie"/>
+			</div>
+
+			<!-- Right Side Content (Images and Contact Info) -->
+			<div class="right-side">
+				<div class="right-side-image">
+					<img src="./Images/mainImages/LeftSidePic.png" alt="Apple Pie with Strawberries" class="right-pie"/>
+
+					<!-- Contact Information -->
+					<div class="contact-info">
+						<p class="email">mcnamarapieco@gmail.com</p>
+						<p class="phone">
+							<img src="./Images/mainImages/Phone.png" alt="Phone Icon" class="phone-icon"	/>
+							519-919-2285
+						</p>
+					</div>
 				</div>
 			</div>
-		</div>
-	</section>
-</section>
+		</section>
 
-<!-- JAMIES PRODUCT SECTION -->
+		<!-- JAMIES PRODUCT SECTION -->
 
-<section id="products">
-	<h2>Our Products</h2>
-	<p>Check out our amazing selection of pies.</p>
-</section>
+		<section id="products">
+			<h2>Our Products</h2>
+			<p>Check out our amazing selection of pies.</p>
+		</section>
 
-<section id="product-container">
+		<section id="product-container">
+			<!-- Row 1 -->
+			<div class="product-row">
+				<div class="product">
+					<img src="Images/pieTest.png" alt="Product 1" />
 
-	<!-- Row 1 -->
-	<div class="product-row">
+					<p class="price">$40</p>
+					<h3>Lemon Pie</h3>
 
-		<div class="product">
-			<img src="Images/pieTest.png" alt="Product 1">
+					<button class="products-discover-button">Discover</button>
+					<button class="products-placeOrder-button">Place Order</button>
+				</div>
 
-			<p class="price">$40</p>
-			<h3>Lemon Pie</h3>
+				<div class="product">
+					<img src="Images/pieTest.png" alt="Product 2" />
 
-			<button class="products-discover-button">Discover</button>
-			<button class="products-placeOrder-button">Place Order</button>
-		</div>
+					<p class="price">$40</p>
+					<h3>Lemon Pie</h3>
 
-		<div class="product">
-			<img src="Images/pieTest.png" alt="Product 2">
+					<button class="products-discover-button">Discover</button>
+					<button class="products-placeOrder-button">Place Order</button>
+				</div>
 
-			<p class="price">$40</p>
-			<h3>Lemon Pie</h3>
+				<div class="product">
+					<img src="Images/pieTest.png" alt="Product 3" />
 
-			<button class="products-discover-button">Discover</button>
-			<button class="products-placeOrder-button">Place Order</button>
-		</div>
+					<p class="price">$40</p>
+					<h3>Lemon Pie</h3>
 
-		<div class="product">
-			<img src="Images/pieTest.png" alt="Product 3">
+					<button class="products-discover-button">Discover</button>
+					<button class="products-placeOrder-button">Place Order</button>
+				</div>
 
-			<p class="price">$40</p>
-			<h3>Lemon Pie</h3>
+				<div class="product">
+					<img src="Images/pieTest.png" alt="Product 4" />
 
-			<button class="products-discover-button">Discover</button>
-			<button class="products-placeOrder-button">Place Order</button>
-		</div>
+					<p class="price">$40</p>
+					<h3>Lemon Pie</h3>
 
-		<div class="product">
-			<img src="Images/pieTest.png" alt="Product 4">
-
-			<p class="price">$40</p>
-			<h3>Lemon Pie</h3>
-
-			<button class="products-discover-button">Discover</button>
-			<button class="products-placeOrder-button">Place Order</button>
-		</div>
-	</div>
-
-	<!-- Row 2 -->
-	<div class="product-row">
-
-		<div class="product">
-			<img src="Images/pieTest.png" alt="Product 5">
-
-			<p class="price">$40</p>
-			<h3>Lemon Pie</h3>
-
-			<button class="products-discover-button">Discover</button>
-			<button class="products-placeOrder-button">Place Order</button>
-		</div>
-
-		<div class="product">
-			<img src="Images/pieTest.png" alt="Product 6">
-
-			<p class="price">$40</p>
-			<h3>Lemon Pie</h3>
-
-			<button class="products-discover-button">Discover</button>
-			<button class="products-placeOrder-button">Place Order</button>
-		</div>
-
-		<div class="product">
-			<img src="Images/pieTest.png" alt="Product 7">
-
-			<p class="price">$40</p>
-			<h3>Lemon Pie</h3>
-
-			<button class="products-discover-button">Discover</button>
-			<button class="products-placeOrder-button">Place Order</button>
-		</div>
-
-		<div class="product">
-			<img src="Images/pieTest.png" alt="Product 8">
-
-			<p class="price">$40</p>
-			<h3>Lemon Pie</h3>
-
-			<button class="products-discover-button">Discover</button>
-			<button class="products-placeOrder-button">Place Order</button>
-		</div>
-	</div>
-
-	<button class="products-morePies-button">More Pies →</button>
-
-</section>
-
-
-
-
-<section id="about">
-	<div class="container">
-		<h2 class="about-heading">About Me</h2>  <!-- This is now the only heading -->
-		<div class="row about-container">
-			<div class="about-text">
-				<p>
-					Hi there! I’m Melissa, the passionate baker behind McNamara Pie Company. Baking has always been my way of expressing
-					creativity, and I’m thrilled to share my love for delicious, homemade treats with you.
-					What started as a hobby in my home kitchen has turned into a small business where I craft baked goods from scratch
-					using only the finest ingredients. I can’t wait to bake something special just for you!
-				</p>
-				<p>Email: <a href="mailto:mcnamarapieco@gmail.com">mcnamarapieco@gmail.com</a></p>
-				<p>Phone: 519-919-2285</p>
+					<button class="products-discover-button">Discover</button>
+					<button class="products-placeOrder-button">Place Order</button>
+				</div>
 			</div>
-			<div class="about-image">
-				<img src="../public/Images/ImagesAboutMe/SideImageAboutME.png" alt="About Me Image" >
+
+			<!-- Row 2 -->
+			<div class="product-row">
+				<div class="product">
+					<img src="Images/pieTest.png" alt="Product 5" />
+
+					<p class="price">$40</p>
+					<h3>Lemon Pie</h3>
+
+					<button class="products-discover-button">Discover</button>
+					<button class="products-placeOrder-button">Place Order</button>
+				</div>
+
+				<div class="product">
+					<img src="Images/pieTest.png" alt="Product 6" />
+
+					<p class="price">$40</p>
+					<h3>Lemon Pie</h3>
+
+					<button class="products-discover-button">Discover</button>
+					<button class="products-placeOrder-button">Place Order</button>
+				</div>
+
+				<div class="product">
+					<img src="Images/pieTest.png" alt="Product 7" />
+
+					<p class="price">$40</p>
+					<h3>Lemon Pie</h3>
+
+					<button class="products-discover-button">Discover</button>
+					<button class="products-placeOrder-button">Place Order</button>
+				</div>
+
+				<div class="product">
+					<img src="Images/pieTest.png" alt="Product 8" />
+
+					<p class="price">$40</p>
+					<h3>Lemon Pie</h3>
+
+					<button class="products-discover-button">Discover</button>
+					<button class="products-placeOrder-button">Place Order</button>
+				</div>
 			</div>
-		</div>
-	</div>
-</section>
 
-<section id="features">
-	<h2>Feature Treats</h2>
-	<p>Discover our limited-time specialty treats.</p>
-</section>
+			<button class="products-morePies-button">More Pies →</button>
+		</section>
 
-<!-- Moe testimonials section-->
+		<section id="about" class="container">
+			<div>
+				<h2 class="about-heading">About Me</h2>
+				<!-- This is now the only heading -->
+				<div class="row about-container">
+					<div class="about-text">
+						<p>
+							Hi there! I’m Melissa, the passionate baker behind McNamara Pie
+							Company. Baking has always been my way of expressing creativity,
+							and I’m thrilled to share my love for delicious, homemade treats
+							with you. What started as a hobby in my home kitchen has turned
+							into a small business where I craft baked goods from scratch using
+							only the finest ingredients. I can’t wait to bake something
+							special just for you!
+						</p>
+						<p>
+							Email:
+							<a href="mailto:mcnamarapieco@gmail.com">mcnamarapieco@gmail.com</a>
+						</p>
+						<p>Phone: 519-919-2285</p>
+					</div>
+					<div class="about-image">
+						<img
+							src="../public/Images/ImagesAboutMe/SideImageAboutME.png"
+							alt="About Me Image"
+						/>
+					</div>
+				</div>
+			</div>
+		</section>
 
-<section id="testimonials" class="testimonials">
-	<h3 class="section-title">TESTIMONIALS</h3>
-	<h2 class="main-title">What do client think of McNamaraPieCo</h2>
+		<!-- TODO:  features section -->
+<!--		<section id="features">-->
+<!--			<h2>Feature Treats</h2>-->
+<!--			<p>Discover our limited-time specialty treats.</p>-->
+<!--		</section>-->
 
-	<div class="testimonial-container">
-		<div class="testimonial-card">
-			<img src="" alt="image1" class="testimonial-img">
-			<h4>Name1</h4>
-			<div class="stars">&#9733; &#9733; &#9733; &#9733; &#9734;</div>
-			<p>Review</p>
-		</div>
+		<!-- Moe testimonials section-->
 
-		<div class="testimonial-card">
-			<img src="" alt="image2" class="testimonial-img">
-			<h4>name2</h4>
-			<div class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
-			<p>"Review"</p>
-		</div>
+		<section id="testimonials" class="testimonials">
+				<h3 class="section-title">TESTIMONIALS</h3>
+				<h2 class="main-title">What do clients think of McNamaraPieCo</h2>
+			<div class="scroller">
+				<div class="testimonial-container scroller__inner">
+					<div class="testimonial-card">
+						<img src="../public/Images/testimonialsImages/avaPic1.png" alt="image1" class="testimonial-img" />
+						<h4>Name1</h4>
+						<div class="stars">&#9733; &#9733; &#9733; &#9733; &#9734;</div>
+						<p>Review</p>
+					</div>
 
-		<div class="testimonial-card">
-			<img src="Image3" alt="image2" class="testimonial-img">
-			<h4>name3</h4>
-			<div class="stars">&#9733; &#9733; &#9734; &#9734; &#9734;</div>
-			<p>Review</p>
-		</div>
-	</div>
-</section>
+					<div class="testimonial-card">
+						<img src="../public/Images/testimonialsImages/avaPic1.png" alt="image1" class="testimonial-img" />
+						<h4>Name2</h4>
+						<div class="stars">&#9733; &#9733; &#9733; &#9733; &#9734;</div>
+						<p>Review</p>
+					</div>
+
+					<div class="testimonial-card">
+						<img src="../public/Images/testimonialsImages/avaPic1.png" alt="image1" class="testimonial-img" />
+						<h4>Name3</h4>
+						<div class="stars">&#9733; &#9733; &#9733; &#9733; &#9734;</div>
+						<p>Review</p>
+					</div>
+
+					<div class="testimonial-card">
+						<img src="../public/Images/testimonialsImages/avaPic2.png" alt="image2" class="testimonial-img" />
+						<h4>Name4</h4>
+						<div class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+						<p>Review</p>
+					</div>
+
+					<div class="testimonial-card">
+						<img src="../public/Images/testimonialsImages/avaPic3.png" alt="image2" class="testimonial-img" />
+						<h4>Name5</h4>
+						<div class="stars">&#9733; &#9733; &#9734; &#9734; &#9734;</div>
+						<p>Review</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- TODO: Order now form -->
+<!--		<section id="order">-->
+<!--			<h2>Place an Order</h2>-->
+<!--			<p>Order your favorite pies online!</p>-->
+<!--		</section>-->
 
 
-<section id="order">
-	<h2>Place an Order</h2>
-	<p>Order your favorite pies online!</p>
-</section>
 
-<!--  MARK: Correct Bootstrap JS (Placed at the end of <body>) -->
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.4/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
-<script src="../js/Index.js"></script>
-</body>
-
+		<!--  MARK: Correct Bootstrap JS (Placed at the end of <body>) -->
+		<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.4/dist/umd/popper.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
+		<script src="../js/Index.js"></script>
+	</body>
 </html>

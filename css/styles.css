@@ -142,7 +142,6 @@ nav ul li:hover {
 
 .mobile-menu li {
 	list-style: none;
-	padding: 10px;
 	text-align: center;
 }
 .mobile-menu li a {
@@ -151,7 +150,7 @@ nav ul li:hover {
 	font-weight: bold;
 	display: block;
 	width: 100%;
-	padding: 5px 10px;
+	padding: 5px 20px;
 }
 .mobile-menu li a:hover {
 	background-image: linear-gradient(to right, transparent, rgb(245, 240, 253), transparent);
@@ -349,7 +348,7 @@ section {
 /* Right Side Image */
 .right-side-image {
 	position: absolute;
-	right: 0%;
+	right: 0;
 	top: 36%;
 	transform: translateY(-50%);
 	max-width: 440px;
@@ -414,47 +413,6 @@ section {
 	}
 }
 
-/* ✅ Mobile Phones (max-width: 768px) */
-@media (max-width: 768px) {
-	.hero {
-		background-image: url("../public/Images/mainImages/BackgtoundGradiendt.png");
-		background-size: cover;
-		background-position: center 95%; /* Moves the curve even lower */
-	}
-
-	.left-side-image {
-		display: none; /* Hide left-side image */
-	}
-
-	.right-side-image img {
-		display: none; /* Hide right-side image */
-	}
-
-	.contact-info {
-		display: none; /*  Hide contact info */
-	}
-}
-
-/* Small Phones (max-width: 480px) */
-@media (max-width: 480px) {
-	.hero {
-		background-image: url("../public/Images/mainImages/BackgtoundGradiendt.png");
-		background-size: cover;
-		background-position: center 98%; /* Moves the curve even lower */
-	}
-
-	.left-side-image {
-		display: none; /* Hide left-side image */
-	}
-
-	.right-side-image img {
-		display: none; /* Hide right-side image */
-	}
-
-	.contact-info {
-		display: none; /*  Hide contact info */
-	}
-}
 
 /* MARK: End of the Hero section*/
 
@@ -742,5 +700,46 @@ section {
 	.about-text,
 	.about-image {
 		max-width: 100%;
+	}
+}
+/* ✅ Mobile Phones (max-width: 768px) */
+@media (max-width: 768px) {
+	.hero {
+		background-image: url("../public/Images/mainImages/BackgtoundGradiendt.png");
+		background-size: cover;
+		background-position: center 95%; /* Moves the curve even lower */
+	}
+
+	.left-side-image {
+		display: none; /* Hide left-side image */
+	}
+
+	.right-side-image img {
+		display: none; /* Hide right-side image */
+	}
+
+	.contact-info {
+		display: none; /*  Hide contact info */
+	}
+}
+
+/* Small Phones (max-width: 480px) */
+@media (max-width: 480px) {
+	.hero {
+		background-image: url("../public/Images/mainImages/BackgtoundGradiendt.png");
+		background-size: cover;
+		background-position: center 98%; /* Moves the curve even lower */
+	}
+
+	.left-side-image {
+		display: none; /* Hide left-side image */
+	}
+
+	.right-side-image img {
+		display: none; /* Hide right-side image */
+	}
+
+	.contact-info {
+		display: none; /*  Hide contact info */
 	}
 }

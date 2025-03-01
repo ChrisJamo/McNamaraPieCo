@@ -1,16 +1,25 @@
-/* MARK: - Reset styling */
+/* ==========
+	MARK: - Reset Styling
+	========== */
 * {
-	padding: 0;
 	margin: 0;
+	padding: 0;
 	box-sizing: border-box;
 }
+
+/* ==========
+	MARK: - Global Styles
+	========== */
 html {
 	font-family: "Lora", serif;
 	scroll-behavior: smooth;
 	scroll-padding-top: 120px;
 }
 
-/* MARK: - Header/Navigation */
+
+/* ==========
+	MARK: - HEADER & NAVIGATION
+	========== */
 header {
 	padding: 10px 20px;
 	background-image: linear-gradient(rgba(232, 223, 246, 0.9), #fde5e5);
@@ -26,7 +35,9 @@ header {
 	z-index: 1000;
 }
 
-/* Logo */
+/* ==========
+	MARK: - LOGO
+	========== */
 .logo img {
 	width: 80px;
 	height: 80px;
@@ -35,6 +46,9 @@ header {
 	margin: 10px;
 }
 
+/* ==========
+	MARK: - NAVIGATION
+	========== */
 nav {
 	display: flex;
 	align-items: center;
@@ -66,10 +80,11 @@ nav ul li:hover {
 	border-radius: 25px;
 	transform: scale(1.05);
 	transition: all 0.2s ease-in-out;
-	/*box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);*/
 }
 
-/* Social Icons */
+/* ==========
+	MARK: - SOCIAL ICONS
+	========== */
 .social-icons {
 	display: flex;
 	gap: 10px;
@@ -95,6 +110,9 @@ nav ul li:hover {
 	transform: scale(1.1);
 }
 
+/* ==========
+	MARK: - HAMBURGER MENU
+	========== */
 #hamburger-icon {
 	margin: auto 0;
 	display: none;
@@ -109,15 +127,15 @@ nav ul li:hover {
 	transition: 0.4s;
 	padding: 2px;
 }
+
+/* Hamburger Menu Animation */
 .open .bar1 {
-	-webkit-transform: rotate(-45deg) translate(-6px, 6px);
 	transform: rotate(-45deg) translate(-6px, 6px);
 }
 .open .bar2 {
 	opacity: 0;
 }
 .open .bar3 {
-	-webkit-transform: rotate(45deg) translate(-6px, -8px);
 	transform: rotate(45deg) translate(-6px, -8px);
 }
 .open .mobile-menu {
@@ -127,6 +145,9 @@ nav ul li:hover {
 	justify-content: flex-start;
 }
 
+/* ==========
+	MARK: - MOBILE MENU
+	========== */
 .mobile-menu {
 	display: none;
 	position: absolute;
@@ -144,6 +165,7 @@ nav ul li:hover {
 	list-style: none;
 	text-align: center;
 }
+
 .mobile-menu li a {
 	color: #5b2245;
 	text-decoration: none;
@@ -152,13 +174,15 @@ nav ul li:hover {
 	width: 100%;
 	padding: 5px 20px;
 }
+
 .mobile-menu li a:hover {
 	background-image: linear-gradient(to right, transparent, rgb(245, 240, 253), transparent);
 	border-radius: 25px;
-	transform: scale(1.05); /* Reduced scale effect for a subtler animation */
-	transition: all 0.2s ease-in-out; /* Slowed down transition and added easing */
+	transform: scale(1.05);
+	transition: all 0.2s ease-in-out;
 }
 
+/* Mobile Menu Social Icons */
 .mobile-menu .social-icons {
 	display: flex;
 	gap: 15px;
@@ -169,7 +193,7 @@ nav ul li:hover {
 .mobile-menu .social-icons a {
 	width: 35px;
 	height: 35px;
-	background: #5b2245; /* Same purple background */
+	background: #5b2245;
 	color: white;
 	display: flex;
 	align-items: center;
@@ -177,16 +201,18 @@ nav ul li:hover {
 	border-radius: 50%;
 	text-decoration: none;
 }
-
-/* sections */
+/* ==========================
+   MARK: - Sections
+   ========================== */
 section {
 	margin-top: 120px;
 	font-size: 40px;
 	justify-content: center;
 }
 
-/* MARK: Hero Section */
-/* Hero Section */
+/* ==========================
+   MARK: - Hero Section
+   ========================== */
 .hero {
 	position: relative;
 	text-align: center;
@@ -195,10 +221,10 @@ section {
 	background-size: 100% auto; /* Ensures full width */
 	background-position: top center;
 	background-repeat: no-repeat;
-	min-height: 120vh; /* Makes sure the section covers the full viewport */
+	min-height: 120vh; /* Ensures the section covers the full viewport */
 }
 
-/*  Hero Header */
+/* Hero Header */
 .hero-header {
 	position: relative;
 	display: inline-block;
@@ -221,22 +247,21 @@ section {
 	display: inline-block;
 }
 
+/* Highlighted Words in Hero Title */
 .hero-title .baked {
 	color: #635682; /* Purple */
 	font-weight: bold;
 }
-
 .hero-title .love {
 	color: #d0191d;
 	font-weight: bold;
 }
-
 .hero-title .family {
 	color: #635682;
 	font-weight: bold;
 }
 
-/* Cherry Icon Position */
+/* Icons in Hero Section */
 .cherry-icon {
 	position: absolute;
 	left: -40px;
@@ -245,7 +270,6 @@ section {
 	height: auto;
 }
 
-/* Underline Icon */
 .underline-icon {
 	position: absolute;
 	right: -50px;
@@ -254,7 +278,7 @@ section {
 	height: auto;
 }
 
-/*  Highlighted Text Colors */
+/* Highlighted Text Colors */
 .highlight {
 	color: #6c0d0f;
 	font-weight: bold;
@@ -266,22 +290,6 @@ section {
 	color: #7e57c2;
 }
 
-/*  Cherry Image */
-.cherry-img {
-	position: absolute;
-	top: -40px;
-	left: -30px;
-	width: 50px;
-}
-
-/*  Underline Icon */
-.underline-icon {
-	position: absolute;
-	right: -28px;
-	bottom: 88px;
-	width: 80px;
-	height: auto;
-}
 /* Button Container */
 .hero-buttons {
 	display: flex;
@@ -290,7 +298,7 @@ section {
 	margin-top: 20px;
 }
 
-/* Shop Now Button */
+/* Buttons */
 .shop-now {
 	background: #d9a5b0; /* Light pink */
 	color: #260b1f;
@@ -303,7 +311,6 @@ section {
 	display: inline-block;
 }
 
-/* Discover Pies Button */
 .discover-pies {
 	background: transparent;
 	color: #260b1f;
@@ -316,7 +323,7 @@ section {
 	display: inline-block;
 }
 
-/* Hover Effects */
+/* Button Hover Effects */
 .shop-now:hover,
 .discover-pies:hover {
 	opacity: 0.85;
@@ -331,7 +338,7 @@ section {
 	margin-top: 15px;
 }
 
-/* Left Side Image */
+/* Side Images */
 .left-side-image {
 	position: absolute;
 	left: 8%;
@@ -339,13 +346,11 @@ section {
 	transform: translateY(-50%);
 	max-width: 408px;
 }
-
 .left-side-image img {
 	width: 100%;
 	height: auto;
 }
 
-/* Right Side Image */
 .right-side-image {
 	position: absolute;
 	right: 0;
@@ -353,13 +358,14 @@ section {
 	transform: translateY(-50%);
 	max-width: 440px;
 }
-
 .right-side-image img {
 	width: 100%;
 	height: auto;
 }
 
-/*  Contact Info (Properly Aligned) */
+/* ==========================
+   MARK: - Contact Info
+   ========================== */
 .contact-info {
 	font-size: 1rem;
 	color: #260b1f;
@@ -367,7 +373,6 @@ section {
 	margin-top: -100px;
 }
 
-/* Email */
 .contact-info .email {
 	font-weight: 200;
 	font-size: 1rem;
@@ -375,7 +380,6 @@ section {
 	margin-bottom: 5px;
 }
 
-/* Phone */
 .contact-info .phone {
 	display: flex;
 	align-items: center;
@@ -385,38 +389,14 @@ section {
 	margin-top: -5px;
 }
 
-/* Phone Icon */
 .contact-info .phone-icon {
 	width: 18px;
 	margin-right: 4px;
 }
 
-/* MARK: Media queries  for HERO */
-/* ✅ Tablets (max-width: 1024px) */
-@media (max-width: 1024px) {
-	.hero {
-		background-image: url("../public/Images/mainImages/BackgtoundGradiendt.png");
-		background-size: cover;
-		background-position: center 90%; /* Moves the curve down */
-	}
-
-	.left-side-image {
-		display: none; /* Hide left-side image */
-	}
-
-	.right-side-image img {
-		display: none; /* Hide right-side image */
-	}
-
-	.contact-info {
-		display: none; /* Hide contact info */
-	}
-}
-
-
-/* MARK: End of the Hero section*/
-
-/*About me*/
+/* ==========================
+   MARK: - About Me Section
+   ========================== */
 .container {
 	position: relative;
 	text-align: center;
@@ -427,7 +407,7 @@ section {
 	min-height: 90vh;
 }
 
-
+/* About Me Heading */
 .about-heading {
 	font-size: 36px;
 	color: #5a2a6f;
@@ -435,6 +415,7 @@ section {
 	width: 100%;
 }
 
+/* About Me Container */
 .about-container {
 	position: relative;
 	display: flex;
@@ -443,6 +424,7 @@ section {
 	padding: 50px;
 }
 
+/* About Me Text */
 .about-text {
 	max-width: 50%;
 	padding: 20px;
@@ -464,6 +446,7 @@ section {
 	text-align: left;
 }
 
+/* About Me Image */
 .about-image {
 	position: absolute;
 	right: -10px; /* Moves it further to the right */
@@ -476,8 +459,9 @@ section {
 	height: auto;
 }
 
-
-/* PRODUCTS SECTION */
+/* ==========================
+   MARK: - PRODUCTS SECTION
+   ========================== */
 #products {
 	text-align: center;
 	margin-top: 1em;
@@ -569,7 +553,11 @@ section {
 .products-placeOrder-button button:hover {
 	background-color: #218838;
 }
-/* testimonials section */
+
+
+/* ==========================
+   MARK: - testimonials section
+   ========================== */
 
 .testimonials {
 	text-align: center;
@@ -634,7 +622,6 @@ section {
 	margin-top: 30px;
 
 }
-
 .main-title {
 	font-size: 24px;
 	font-weight: bold;
@@ -674,6 +661,9 @@ section {
 	}
 }
 
+/* ==========================
+   MARK: - Responsive LAYOUT
+   ========================== */
 @media only screen and (max-width: 1024px) {
 	header {
 		justify-content: space-between;
@@ -691,6 +681,7 @@ section {
 		color: #5b2245;
 	}
 }
+
 @media (max-width: 768px) {
 	.about-container {
 		flex-direction: column;
@@ -741,5 +732,26 @@ section {
 
 	.contact-info {
 		display: none; /*  Hide contact info */
+	}
+}
+/* MARK: Media queries  for HERO */
+/* ✅ Tablets (max-width: 1024px) */
+@media (max-width: 1024px) {
+	.hero {
+		background-image: url("../public/Images/mainImages/BackgtoundGradiendt.png");
+		background-size: cover;
+		background-position: center 90%; /* Moves the curve down */
+	}
+
+	.left-side-image {
+		display: none; /* Hide left-side image */
+	}
+
+	.right-side-image img {
+		display: none; /* Hide right-side image */
+	}
+
+	.contact-info {
+		display: none; /* Hide contact info */
 	}
 }

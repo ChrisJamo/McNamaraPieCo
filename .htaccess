@@ -1,0 +1,11 @@
+#RewriteEngine On
+#
+## Set index.html as the default file
+#DirectoryIndex index.html
+#
+## Allow direct access to static files (CSS, JS, Images)
+#RewriteCond %{REQUEST_URI} !\.(css|js|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot|otf)$ [NC]
+#
+## Ensure all other requests are routed to the public directory
+#RewriteCond %{REQUEST_URI} !^/public/
+#RewriteRule ^(.*)$ /public/$1 [L]

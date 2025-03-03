@@ -24,25 +24,6 @@ toggleHeading(); // Run on page load
 
 const scrollers = document.querySelectorAll(".scroller");
 
-function addAnimation() {
-	scrollers.forEach((scroller) => {
-		scroller.setAttribute("data-animated", true);
-
-		const scrollerInner = scroller.querySelector(".scroller__inner");
-		const scrollerContent = Array.from(scrollerInner.children);
-
-		// Duplicate content to create an infinite loop effect
-		scrollerContent.forEach((item) => {
-			const duplicatedItem = item.cloneNode(true);
-			duplicatedItem.setAttribute("aria-hidden", true);
-			scrollerInner.appendChild(duplicatedItem);
-		});
-	});
-}
-
-if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-	addAnimation();
-}
 
 //nav dessapeared on scrolling
 let lastScrollTop = 0;

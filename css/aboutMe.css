@@ -1,0 +1,76 @@
+
+/* ==========================
+   MARK: - About Me Section
+   ========================== */
+.container {
+    position: relative;
+    text-align: center;
+    background-image: url("../public/Images/ImagesAboutMe/AboutMe.jpg");
+    background-size: cover;
+    background-position: center bottom; /* Positions the image at the bottom */
+    background-repeat: no-repeat;
+    min-height: 90vh;
+}
+
+/* About Me Heading */
+.about-heading {
+    font-size: 36px;
+    color: #5a2a6f;
+    text-align: center;
+    width: 100%;
+}
+
+/* About Me Container */
+.about-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Pushes content left and right */
+    padding: 50px;
+}
+
+/* About Me Text */
+.about-text {
+    max-width: 50%;
+    padding: 20px;
+    text-align: left;
+}
+
+.about-text h2 {
+    font-size: 32px;
+    color: #5a2a6f;
+    text-align: center;
+    width: 100%;
+    margin-top: 0; /* Adjusts spacing at the top */
+}
+
+.about-text p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+    text-align: left;
+}
+
+/* About Me Image */
+.about-image {
+    position: absolute;
+    right: -10px; /* Moves it further to the right */
+    top: 0; /* Moves the image higher up */
+    width: 36%; /* Adjust size as needed */
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+}
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text,
+    .about-image {
+        max-width: 100%;
+    }
+}

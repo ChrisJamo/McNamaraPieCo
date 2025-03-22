@@ -1,31 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>McNamaraPieCo</title>
-	<link rel="stylesheet" href="../css/styles.css" />
-	<link rel="stylesheet" href="../css/hero.css" />
-	<link rel="stylesheet" href="../css/product.css" />
-	<link rel="stylesheet" href="../css/aboutMe.css" />
-	<link rel="stylesheet" href="../css/features.css" />
-	<link rel="stylesheet" href="../css/testimonials.css" />
-	<link rel="stylesheet" href="../css/orderForm.css" />
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="../css/styles.css">
+	<link rel="stylesheet" href="../css/hero.css">
+	<link rel="stylesheet" href="../css/product.css">
+	<link rel="stylesheet" href="../css/aboutMe.css">
+	<link rel="stylesheet" href="../css/features.css">
+	<link rel="stylesheet" href="../css/testimonials.css">
+	<link rel="stylesheet" href="../css/orderForm.css">
 
 	<!-- Google Font: Lora -->
-	<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet"/>
-	<!-- FONT TO GET THE FACEBOOK AND INSTAGRAM ICON -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+	<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+
+	<!-- FontAwesome for Social Icons -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
-<!-- header -->
+<!-- Header -->
 <header>
 	<div class="logo">
-		<img src="Images/logo.png" alt="McNamaraPieCo's logo" />
+		<img src="Images/logo.png" alt="McNamaraPieCo's logo">
 	</div>
-	<h1 id="responsive-heading" style="display: none">McNamaraPieCo</h1>
+
+	<!-- Accessible Hidden Heading -->
+	<h1 id="responsive-heading" style="display: none;">McNamaraPieCo</h1>
+
+	<!-- Navigation -->
 	<nav>
-		<!-- Navigation Links -->
 		<ul>
 			<li><a href="#home">Home</a></li>
 			<li><a href="#products">Products</a></li>
@@ -37,10 +43,12 @@
 
 		<!-- Social Media Icons -->
 		<div class="social-icons">
-			<a href="#"><i class="fab fa-facebook-f"></i></a>
-			<a href="#"><i class="fab fa-instagram"></i></a>
+			<a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+			<a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
 		</div>
 	</nav>
+
+	<!-- Mobile Menu (Hamburger) -->
 	<div id="hamburger-icon" onclick="toggleMobileMenu(this)">
 		<div class="bar1"></div>
 		<div class="bar2"></div>
@@ -60,31 +68,32 @@
 	</div>
 </header>
 
-<!-- Dynamically loading section using Dynamic-Louder.js -->
-<!-- MARK: Hero Section -->
-<section class="hero" id="home"></section>
+<!-- Main Content -->
+<main>
+	<!-- Hero Section (Dynamically Loaded) -->
+	<section class="hero" id="home"></section>
 
-<!-- JAMIE'S PRODUCT SECTION -->
-<section id="products"></section>
+	<!-- Products Section -->
+	<section id="products" class="product-container"></section>
 
-<section id="about" class="container"></section>
+	<!-- About Me Section -->
+	<section id="about" class="container"></section>
 
-<!-- TODO:  features section -->
-<!--		<section id="features">-->
-<!--			<h2>Feature Treats</h2>-->
-<!--			<p>Discover our limited-time specialty treats.</p>-->
-<!--		</section>-->
+	<!-- Features Section (Uncomment when content is ready) -->
+	<!-- <section id="features">
+        <h2>Feature Treats</h2>
+        <p>Discover our limited-time specialty treats.</p>
+    </section> -->
 
-<!-- Moe testimonials section-->
-<section id="testimonials" class="testimonials"></section>
+	<!-- Testimonials Section -->
+	<section id="testimonials" class="testimonials"></section>
 
-<!-- TODO: Order now form -->
-<!--		<section id="order">-->
-<!--			<h2>Place an Order</h2>-->
-<!--			<p>Order your favorite pies online!</p>-->
-<!--		</section>-->
+	<!-- Order Form Section -->
+	<section id="order" class="order"></section>
 
-<!--  MARK: Correct Bootstrap JS (Placed at the end of <body>) -->
+</main>
+
+<!-- Scripts (Load JavaScript at the end for better performance) -->
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.4/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>

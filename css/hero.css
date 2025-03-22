@@ -10,7 +10,17 @@
     background-size: 100% auto; /* Ensures full width */
     background-position: top center;
     background-repeat: no-repeat;
-    min-height: 120vh; /* Ensures the section covers the full viewport */
+    min-height: 110vh; /* Ensures the section covers the full viewport */
+}
+
+/* Centering the Hero Content */
+.hero-container {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
 }
 
 /* Hero Header */

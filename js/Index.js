@@ -25,20 +25,20 @@ toggleHeading(); // Run on page load
 const scrollers = document.querySelectorAll(".scroller");
 
 
-//nav dessapeared on scrolling
-let lastScrollTop = 0;
-const navbar = document.querySelector("header");
+const header = document.querySelector("header"); // Corrected selector
+let prevScroll = window.scrollY ;
 
 window.addEventListener("scroll", function () {
-	let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+	let currentScrollPosition = window.scrollY;
 
-	if (scrollTop > lastScrollTop) {
-		// Scrolling down -> Hide navbar
-		navbar.style.top = "-100px";
+	if (prevScroll < currentScrollPosition) {
+		// Scrolling down: Hide header
+		header.classList.add("scroll");
 	} else {
-		// Scrolling up -> Show navbar
-		navbar.style.top = "0";
+		// Scrolling up: Show header
+		header.classList.remove("scroll");
 	}
 
-	lastScrollTop = scrollTop;
+	prevScroll = currentScrollPosition;
 });
+

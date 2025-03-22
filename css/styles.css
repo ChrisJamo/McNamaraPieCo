@@ -22,22 +22,31 @@ html {
 header {
 	padding: 10px 20px;
 	background-image: linear-gradient(rgba(232, 223, 246, 0.9), #fde5e5);
-	height: 100px;
+	height: 7rem;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-	border-bottom: 4px solid #5b2245;
+	border-bottom: 4px solid #983670;
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
 	z-index: 1000;
-	transition: top 0.3s ease-in-out;
+	transition: 0.5s ease-in-out;
+}
+
+header.scroll {
+	position: fixed;
+	left: 0;
+	width: 100%;
+	transform: translateY(-7rem);
+	z-index: 1000;
+	transition: 0.5s ease-in-out;
 }
 
 header:hover {
-	top: 0; /* Ensure it shows up when hovered */
+	transform: translateY(0);
 }
 
 /* ==========
@@ -82,10 +91,10 @@ nav ul li a {
 
 nav ul li:hover {
 	background-image: linear-gradient(
-		to right,
-		transparent,
-		rgb(245, 240, 253),
-		transparent
+			to right,
+			transparent,
+			rgb(245, 240, 253),
+			transparent
 	);
 	border-radius: 25px;
 	transform: scale(1.05);
@@ -176,6 +185,7 @@ nav ul li a:hover::after {
 	justify-content: flex-start;
 }
 
+
 /* ==========
 	MARK: - MOBILE MENU
 	========== */
@@ -208,10 +218,10 @@ nav ul li a:hover::after {
 
 .mobile-menu li a:hover {
 	background-image: linear-gradient(
-		to right,
-		transparent,
-		rgb(245, 240, 253),
-		transparent
+			to right,
+			transparent,
+			rgb(245, 240, 253),
+			transparent
 	);
 	border-radius: 25px;
 	transform: scale(1.05);

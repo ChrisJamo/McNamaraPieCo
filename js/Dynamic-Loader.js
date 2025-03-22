@@ -14,6 +14,7 @@ window.addEventListener('DOMContentLoaded', () => {
     loadSection('products', '../public/Layout/product.html');
     loadSection('about', '../public/Layout/aboutMe.html');
     loadSection('features', '../public/Layout/features.html');
+    loadSection('order', '../public/Layout/orderForm.html');
     loadSection('testimonials', '../public/Layout/testimonials.html').then(() => {
         // Now apply the animation after loading testimonials
         if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {

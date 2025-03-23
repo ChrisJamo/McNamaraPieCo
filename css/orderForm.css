@@ -1,0 +1,191 @@
+/* General Container */
+.order-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px;
+    max-width: 1200px;
+    margin: auto;
+    border-radius: 15px;
+    border: 1px solid #ddd;
+    background-color: #fafafa;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Order Form */
+.order-form {
+    flex: 1;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+}
+
+/* Section Title */
+.order-title {
+    text-align: center;
+    color: #5a2a6f;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* Payment Method */
+.payment-method {
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #e1e1e1;
+    margin-bottom: 20px;
+}
+
+.payment-header {
+    font-size: 18px;
+    font-weight: bold;
+    color: #5a2a6f;
+    margin-bottom: 10px;
+}
+
+.payment-options {
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.payment-options label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.payment-options label:hover {
+    transform: scale(1.1);
+}
+
+.payment-options img {
+    width: 60px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Radio Buttons */
+.payment-options input[type="radio"] {
+    margin-bottom: 5px;
+}
+
+/* Form Fields */
+input, select, textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #b0b7c6;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Input Fields (name-fields, date-time, select-fields) */
+.name-fields {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 12px;
+}
+
+.date-time {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 12px;
+}
+
+.select-fields {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+/* Button Styling */
+button {
+    background-color: #8c94ab;
+    color: white;
+    border: none;
+    padding: 14px;
+    font-size: 16px;
+    border-radius: 8px;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #6e768b;
+}
+
+/* Note Text */
+.note {
+    text-align: center;
+    font-size: 14px;
+    color: #888;
+}
+
+/* Contact Info */
+.contact-info {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.contact-info a {
+    color: #5a2a6f;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Image Section */
+.image-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.image-placeholder img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .order-container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .order-form,
+    .image-section {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .name-fields,
+    .date-time,
+    .select-fields {
+        flex-direction: column;
+    }
+
+    .payment-options {
+        flex-direction: column;
+        align-items: center;
+    }
+}

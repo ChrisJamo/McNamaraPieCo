@@ -12,7 +12,7 @@
 /* Scrolling container */
 .scroller {
     overflow: hidden;
-    max-width: 800px;
+    max-width: 1200px;
     position: relative;
 }
 
@@ -61,6 +61,21 @@
     font-weight: bold;
     color: #5b2245;
     margin-bottom: 40px;
+}
+/* Testimonial Paragraph Styling */
+.testimonial-card p {
+    font-size: 14px; /* Smaller, readable size */
+    color: #555; /* Softer gray for contrast */
+    line-height: 1.5; /* Improved readability */
+    text-align: center; /* Centered to match the card layout */
+    font-style: italic; /* Subtle italic for a testimonial vibe */
+    max-width: 90%; /* Keeps text from touching edges */
+    margin: 10px auto 0;
+}
+
+/* Optional: Hover effect for subtle interactivity */
+.testimonial-card p:hover {
+    color: #333; /* Slightly darker on hover */
 }
 
 .testimonials h4 {

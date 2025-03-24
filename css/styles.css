@@ -1,6 +1,6 @@
 /* ==========
-	MARK: - Reset Styling
-	========== */
+    MARK: - Reset Styling
+    ========== */
 * {
 	margin: 0;
 	padding: 0;
@@ -8,50 +8,55 @@
 }
 
 /* ==========
-	MARK: - Global Styles
-	========== */
+    MARK: - Global Styles
+    ========== */
 html {
 	font-family: "Lora", serif;
 	scroll-behavior: smooth;
-	scroll-padding-top: 20px;
+	scroll-padding-top: 7rem;
 }
 
 /* ==========
-	MARK: - HEADER & NAVIGATION
-	========== */
+    MARK: - HEADER & NAVIGATION
+    ========== */
+/* ==========
+    MARK: - HEADER & NAVIGATION
+    ========== */
 header {
 	padding: 10px 20px;
-	background-image: linear-gradient(rgba(232, 223, 246, 0.9), #fde5e5);
+	background-image: linear-gradient(rgba(232, 223, 246, 0.9), #fde5e5); /* Warm gradient */
 	height: 7rem;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-	border-bottom: 4px solid #983670;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Softer shadow */
+	border-bottom: 2px solid #983670; /* Thinner border for subtlety */
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
 	z-index: 1000;
-	transition: 0.5s ease-in-out;
+	transition: transform 0.5s ease-in-out; /* Only transform transitions */
 }
 
+/* For scroll effect */
 header.scroll {
-	position: fixed;
-	left: 0;
-	width: 100%;
-	transform: translateY(-7rem);
-	z-index: 1000;
-	transition: 0.5s ease-in-out;
+	transform: translateY(-7rem);  /* Moves the header off-screen */
+	transition: transform 0.5s ease-in-out; /* Smooth transition for scrolling */
 }
 
-header:hover {
-	transform: translateY(0);
+/* Hover effect on header */
+header.scroll:hover {
+	top: 0;  /* Ensures the header resets position */
+	transform: none;  /* Remove translateY for smooth hover effect */
+	transition: top 0.3s ease-out, transform 0.3s ease-out; /* Smooth hover transition */
 }
+
+
 
 /* ==========
-	MARK: - LOGO
-	========== */
+    MARK: - LOGO
+    ========== */
 .logo img {
 	width: 80px;
 	height: 80px;
@@ -61,8 +66,8 @@ header:hover {
 }
 
 /* ==========
-	MARK: - NAVIGATION
-	========== */
+    MARK: - NAVIGATION
+    ========== */
 nav {
 	display: flex;
 	align-items: center;
@@ -83,32 +88,26 @@ nav ul li {
 }
 
 nav ul li a {
-	color: #5b2245; /* Purple text */
+	color: #5b2245;
 	text-decoration: none;
 	font-weight: bold;
 	margin-left: 10px;
 }
 
 nav ul li:hover {
-	background-image: linear-gradient(
-			to right,
-			transparent,
-			rgb(245, 240, 253),
-			transparent
-	);
+	background-image: linear-gradient(to right, transparent, rgba(245, 240, 253, 0.8), transparent); /* Softer gradient */
 	border-radius: 25px;
 	transform: scale(1.05);
-	transition: all 0.2s ease-in-out;
 }
 
-/*Underline hover effect*/
+/* Underline hover effect */
 nav ul li a::after {
 	content: "";
 	position: absolute;
-	bottom: -4px; /* Adjust spacing */
+	bottom: -4px;
 	left: 50%;
 	width: 120%;
-	height: 12px; /* Adjust based on your image */
+	height: 12px;
 	background-image: url("../public/Images/navBarImages/Underline.png");
 	background-size: contain;
 	background-repeat: no-repeat;
@@ -123,8 +122,8 @@ nav ul li a:hover::after {
 }
 
 /* ==========
-	MARK: - SOCIAL ICONS
-	========== */
+    MARK: - SOCIAL ICONS
+    ========== */
 .social-icons {
 	display: flex;
 	gap: 10px;
@@ -132,17 +131,15 @@ nav ul li a:hover::after {
 }
 
 .social-icons a {
-	text-decoration: none;
-	background: #5b2245; /* Purple Background */
+	background: #5b2245;
 	color: white;
 	border-radius: 50%;
-	margin-left: 10px;
 	width: 40px;
 	height: 40px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Softer shadow */
 	transition: transform 0.3s;
 }
 
@@ -151,8 +148,8 @@ nav ul li a:hover::after {
 }
 
 /* ==========
-	MARK: - HAMBURGER MENU
-	========== */
+    MARK: - HAMBURGER MENU
+    ========== */
 #hamburger-icon {
 	margin: auto 0;
 	display: none;
@@ -165,7 +162,6 @@ nav ul li a:hover::after {
 	background-color: #5b2245;
 	margin: 6px 0;
 	transition: 0.4s;
-	padding: 2px;
 }
 
 /* Hamburger Menu Animation */
@@ -185,17 +181,16 @@ nav ul li a:hover::after {
 	justify-content: flex-start;
 }
 
-
 /* ==========
-	MARK: - MOBILE MENU
-	========== */
+    MARK: - MOBILE MENU
+    ========== */
 .mobile-menu {
 	display: none;
 	position: absolute;
 	top: 100%;
 	left: 0;
 	width: 100%;
-	background-image: linear-gradient(to top, rgba(232, 223, 246, 0.9), #fde5e5);
+	background-image: linear-gradient(to top, rgba(232, 223, 246, 0.9), #fde5e5); /* Matches header */
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 	flex-direction: column;
 	align-items: center;
@@ -217,15 +212,9 @@ nav ul li a:hover::after {
 }
 
 .mobile-menu li a:hover {
-	background-image: linear-gradient(
-			to right,
-			transparent,
-			rgb(245, 240, 253),
-			transparent
-	);
+	background-image: linear-gradient(to right, transparent, rgba(245, 240, 253, 0.8), transparent);
 	border-radius: 25px;
 	transform: scale(1.05);
-	transition: all 0.2s ease-in-out;
 }
 
 /* Mobile Menu Social Icons */
@@ -245,7 +234,6 @@ nav ul li a:hover::after {
 	align-items: center;
 	justify-content: center;
 	border-radius: 50%;
-	text-decoration: none;
 }
 
 /* ==========================
@@ -257,6 +245,108 @@ section {
 	justify-content: center;
 }
 
+/* ==========
+    MARK: - Footer Styling
+    ========== */
+footer {
+	background-image: linear-gradient(to top, #fde5e5, rgba(232, 223, 246, 0.9)); /* Mirrors header gradient */
+	padding: 40px 20px;
+	font-family: 'Lora', serif;
+	color: #333;
+	border-top: 2px solid #983670; /* Matches header border */
+	box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow upward */
+}
+
+.footer-container {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	gap: 20px;
+}
+
+.footer-logo img {
+	max-width: 100px;
+	height: auto;
+}
+
+.footer-nav ul {
+	list-style: none;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 15px;
+}
+
+.footer-nav a {
+	color: #5b2245; /* Matches header nav color */
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: bold; /* Matches header nav weight */
+	transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+	color: #983670; /* Darker purple for hover, ties to border */
+}
+
+.footer-social {
+	display: flex;
+	gap: 15px;
+}
+
+.footer-social a {
+	color: #5b2245; /* Matches header social icons */
+	font-size: 18px;
+	text-decoration: none;
+	transition: color 0.3s ease, transform 0.3s;
+}
+
+.footer-social a:hover {
+	color: #983670;
+	transform: scale(1.1); /* Matches header social hover */
+}
+
+.footer-bottom {
+	width: 100%;
+	text-align: center;
+	margin-top: 20px;
+}
+
+.footer-bottom p {
+	font-size: 12px;
+	color: #5b2245; /* Matches nav text */
+	margin: 0;
+}
+
+/* Responsive Design - Footer */
+@media (max-width: 768px) {
+	.footer-container {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.footer-nav ul {
+		justify-content: center;
+	}
+
+	.footer-social {
+		justify-content: center;
+	}
+}
+
+@media (max-width: 480px) {
+	.footer-nav ul {
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	.footer-logo img {
+		max-width: 80px;
+	}
+}
 
 /* ==========================
    MARK: - Responsive LAYOUT
@@ -278,5 +368,3 @@ section {
 		color: #5b2245;
 	}
 }
-
-

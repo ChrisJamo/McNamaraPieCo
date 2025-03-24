@@ -25,20 +25,28 @@ toggleHeading(); // Run on page load
 const scrollers = document.querySelectorAll(".scroller");
 
 
-const header = document.querySelector("header"); // Corrected selector
-let prevScroll = window.scrollY ;
+const header = document.querySelector("header");  // Corrected selector
+let prevScroll = window.scrollY;
 
 window.addEventListener("scroll", function () {
 	let currentScrollPosition = window.scrollY;
 
+	// Scroll logic to hide header when scrolling down
 	if (prevScroll < currentScrollPosition) {
-		// Scrolling down: Hide header
 		header.classList.add("scroll");
 	} else {
-		// Scrolling up: Show header
+		// Scroll up logic to show header
 		header.classList.remove("scroll");
 	}
 
 	prevScroll = currentScrollPosition;
 });
+
+// Mouse hover detection to bring back the header when hovering near the top of the screen
+document.addEventListener("mousemove", function (event) {
+	if (event.clientY < 50) {  // If mouse is within 50px from the top
+		header.classList.remove("scroll");  // Remove scroll class to show header
+	}
+});
+
 

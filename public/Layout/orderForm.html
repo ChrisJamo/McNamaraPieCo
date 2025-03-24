@@ -1,62 +1,73 @@
-<h2 class="section-title">Place an Order</h2>
-<p class="order-title">Order your favorite pies online!</p>
+<section>
+    <h2 class="section-title">Place an Order</h2>
+    <p class="order-title">Order your favorite pies online!</p>
 
-<div class="order-container">
-    <div class="order-form">
-        <div class="payment-method">
-            <div class="payment-header">Payment Method</div>
-            <div class="payment-options">
-                <label>
-                    <img src="./Images/orderFormImages/img_2.png" alt="Cash" />
-                    <input type="radio" name="payment" value="cash" />
-                    <span class="custom-radio"></span> Cash
-                </label>
-                <label>
-                    <img src="./Images/orderFormImages/img_1.png" alt="E-transfer" />
-                    <input type="radio" name="payment" value="etransfer" />
-                    <span class="custom-radio"></span> Interac e-Transfer® to
-                    <a href="mailto:mcnamarapieco@gmail.com">mcnamarapieco@gmail.com</a>
-                </label>
+    <div class="order-container">
+        <div class="order-form">
+            <div class="payment-method">
+                <div class="payment-header">Payment Method</div>
+                <div class="payment-options">
+                    <label>
+                        <img src="./Images/orderFormImages/img_2.png" alt="Cash payment option" />
+                        <input type="radio" name="payment" value="cash" required />
+                        Cash
+                    </label>
+                    <label>
+                        <img src="./Images/orderFormImages/img_1.png" alt="E-transfer payment option" />
+                        <input type="radio" name="payment" value="etransfer" required />
+                        Interac e-Transfer® to
+                        <a href="mailto:mcnamarapieco@gmail.com">mcnamarapieco@gmail.com</a>
+                    </label>
+                </div>
             </div>
+
+            <form action="#" method="POST">
+                <div class="name-fields">
+                    <input type="text" placeholder="First name" required aria-label="First name" />
+                    <input type="text" placeholder="Last name" required aria-label="Last name" />
+                </div>
+                <input type="email" placeholder="Email" required aria-label="Email address" />
+                <input type="tel" placeholder="+1 (555) 000-0000" required aria-label="Phone number" />
+
+                <div class="date-time">
+                    <input type="date" required aria-label="Pickup date" />
+                    <select required aria-label="Pickup time period">
+                        <option value="AM">AM</option>
+                        <option value="PM">PM</option>
+                    </select>
+                </div>
+
+                <div id="pie-selection-container">
+                    <div class="select-fields">
+                        <select required aria-label="Pie selection">
+                            <option value="">Pick your pie</option>
+                            <option value="apple">Apple Pie</option>
+                            <option value="blueberry">Blueberry Pie</option>
+                            <option value="cherry">Cherry Pie</option>
+                            <option value="pecan">Pecan Pie</option>
+                        </select>
+                        <input type="number" min="1" value="1" required aria-label="Quantity" />
+                    </div>
+                </div>
+
+                <button type="button" id="add-pie">Add Another Pie</button>
+
+                <textarea placeholder="If you are requesting a custom order, please let us know..." aria-label="Custom order notes"></textarea>
+
+                <button type="submit">Submit Order</button>
+                <p class="note">A copy of your responses will be emailed to the address you provided.</p>
+            </form>
+
+            <p class="contact-info">
+                Tel: <a href="tel:+15199192285">519-919-2285</a>   
+                Email: <a href="mailto:mcnamarapieco@gmail.com">mcnamarapieco@gmail.com</a>
+            </p>
         </div>
 
-        <form>
-            <div class="name-fields">
-                <input type="text" placeholder="First name" required />
-                <input type="text" placeholder="Last name" required />
+        <div class="image-section">
+            <div class="image-placeholder">
+                <img src="./Images/orderFormImages/img.png" alt="Freshly baked pie" width="1200px" height="auto" />
             </div>
-            <input type="email" placeholder="Email" required />
-            <input type="tel" placeholder="+1 (555) 000-0000" required />
-
-            <div class="date-time">
-                <input type="date" required />
-                <select>
-                    <option>AM</option>
-                    <option>PM</option>
-                </select>
-            </div>
-
-            <div class="select-fields">
-                <select required>
-                    <option>Pick your pie</option>
-                </select>
-                <input type="number" min="1" value="1" />
-            </div>
-
-            <textarea placeholder="If you are requesting a custom order, please let us know..."></textarea>
-
-            <button type="submit">Submit</button>
-            <p class="note">A copy of your responses will be emailed to the address you provided.</p>
-        </form>
-
-        <p class="contact-info">
-            Tel: 519-919-2285 &nbsp;&nbsp; Email: <a href="mailto:mcnamarapieco@gmail.com">mcnamarapieco@gmail.com</a>
-        </p>
-    </div>
-
-    <div class="image-section">
-        <div class="image-placeholder">
-            <img src="./Images/orderFormImages/img.png" alt="About Me Image" width="1200px" height="auto" />
         </div>
     </div>
-</div>
+</section>

@@ -196,7 +196,7 @@
 
 .right-side-image {
 	position: absolute;
-	right: -5%;
+	right: 100%;
 	top: 44%;
 	transform: translateY(-50%);
 	max-width: 480px;

@@ -75,7 +75,7 @@
 		transform: translateY(10px); /* Slight bounce below final position */
 	}
 	80% {
-		transform: translateY(-5px); /* Slight bounce above final position */
+		transform: translateY(5px); /* Slight bounce above final position */
 	}
 	100% {
 		opacity: 1;
@@ -85,7 +85,7 @@
 
 .cherry-icon {
 	position: absolute;
-	left: 46px; /* Adjust as needed */
+	left: 132px; /* Adjust as needed */
 	top: -46px; /* Final landing position */
 	width: 100px;
 	height: auto;
@@ -184,25 +184,25 @@
 /* Side Images */
 .left-side-image {
 	position: absolute;
-	left: 2%;
+	left: 1%;
 	top: 70%;
 	transform: translateY(-50%);
 	max-width: 408px;
 }
 .left-side-image img {
-	width: 100%;
+	width: 130%;
 	height: auto;
 }
 
 .right-side-image {
 	position: absolute;
-	right: 100%;
-	top: 44%;
+	right: 1%;
+	top: 56%;
 	transform: translateY(-50%);
 	max-width: 480px;
 }
 .right-side-image img {
-	width: 78%;
+	width: 100%;
 	height: auto;
 }
 
@@ -318,20 +318,20 @@
 		background-position: center 60%;
 	}
 
-	.left-side-image,
-	.right-side-image {
-		max-width: 550px;
-		top: 50%;
-		transform: translateY(-50%);
-	}
+	/*.left-side-image,*/
+	/*.right-side-image {*/
+	/*	max-width: 550px;*/
+	/*	top: 50%;*/
+	/*	transform: translateY(-50%);*/
+	/*}*/
 
-	.left-side-image {
-		left: 10%;
-	}
+	/*.left-side-image {*/
+	/*	left: 10%;*/
+	/*}*/
 
-	.right-side-image {
-		right: 5%;
-	}
+	/*.right-side-image {*/
+	/*	right: 5%;*/
+	/*}*/
 
 	.hero-container {
 		top: 26%;

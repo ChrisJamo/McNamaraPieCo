@@ -24,8 +24,11 @@ html {
     ========== */
 header {
 	padding: 10px 20px;
-	background-image: linear-gradient(rgba(232, 223, 246, 0.9), #fde5e5); /* Warm gradient */
-	height: 7rem;
+	background-image: linear-gradient(
+		rgba(232, 223, 246, 0.9),
+		#fde5e5
+	); /* Warm gradient */
+	height: 6rem;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -41,28 +44,26 @@ header {
 
 /* For scroll effect */
 header.scroll {
-	transform: translateY(-7rem);  /* Moves the header off-screen */
+	transform: translateY(-7rem); /* Moves the header off-screen */
 	transition: transform 0.5s ease-in-out; /* Smooth transition for scrolling */
 }
 
 /* Hover effect on header */
 header.scroll:hover {
-	top: 0;  /* Ensures the header resets position */
-	transform: none;  /* Remove translateY for smooth hover effect */
+	top: 0; /* Ensures the header resets position */
+	transform: none; /* Remove translateY for smooth hover effect */
 	transition: top 0.3s ease-out, transform 0.3s ease-out; /* Smooth hover transition */
 }
-
-
 
 /* ==========
     MARK: - LOGO
     ========== */
 .logo img {
-	width: 80px;
-	height: 80px;
-	border-radius: 15%;
-	object-fit: cover;
+	width: 120px; /* Adjust as needed */
+	height: auto; /* Maintain aspect ratio */
+	object-fit: contain; /* Prevent distortion */
 	margin: 10px;
+	border-radius: 0; /* Remove rounded corners */
 }
 
 /* ==========
@@ -77,7 +78,7 @@ nav {
 nav ul {
 	list-style: none;
 	display: flex;
-	gap: 15px;
+	gap: 2px; /*doesnt work*/
 	margin: 0;
 	padding: 0;
 }
@@ -88,14 +89,28 @@ nav ul li {
 }
 
 nav ul li a {
-	color: #5b2245;
+	color: #260b1f;
+	font-family: "Lora", serif;
+	font-weight: 400; /* initial regular weight */
+	font-size: 18px;
 	text-decoration: none;
-	font-weight: bold;
-	margin-left: 10px;
+	position: relative;
+	padding: 5px 6px;
+	transition: color 0.3s, font-weight 0.3s; /* Add font-weight transition */
+}
+
+nav ul li a:hover {
+	color: #8d1114;
+	font-weight: 700; /* Bold weight on hover */
 }
 
 nav ul li:hover {
-	background-image: linear-gradient(to right, transparent, rgba(245, 240, 253, 0.8), transparent); /* Softer gradient */
+	background-image: linear-gradient(
+		to right,
+		transparent,
+		rgba(245, 240, 253, 0.8),
+		transparent
+	);
 	border-radius: 25px;
 	transform: scale(1.05);
 }
@@ -121,6 +136,27 @@ nav ul li a:hover::after {
 	opacity: 1;
 }
 
+nav ul li a.active {
+	font-size: 20px;
+	font-weight: 900; /* bold */
+	color: #8d1114;
+}
+
+nav ul li a.active::after {
+	content: "";
+	position: absolute;
+	bottom: -8px; /* Adjust based on your needs */
+	left: 50%;
+	width: 100%;
+	height: 16px; /* Adjust height as per your underline image */
+	background-image: url("../public/Images/navBarImages/Underline.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	transform: translateX(-50%);
+	opacity: 1; /* Visible for active link */
+}
+
 /* ==========
     MARK: - SOCIAL ICONS
     ========== */
@@ -141,6 +177,8 @@ nav ul li a:hover::after {
 	justify-content: center;
 	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Softer shadow */
 	transition: transform 0.3s;
+	text-decoration: none; /* explicitly remove underline or decoration */
+	list-style: none;
 }
 
 .social-icons a:hover {
@@ -190,7 +228,11 @@ nav ul li a:hover::after {
 	top: 100%;
 	left: 0;
 	width: 100%;
-	background-image: linear-gradient(to top, rgba(232, 223, 246, 0.9), #fde5e5); /* Matches header */
+	background-image: linear-gradient(
+		to top,
+		rgba(232, 223, 246, 0.9),
+		#fde5e5
+	); /* Matches header */
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 	flex-direction: column;
 	align-items: center;
@@ -212,7 +254,12 @@ nav ul li a:hover::after {
 }
 
 .mobile-menu li a:hover {
-	background-image: linear-gradient(to right, transparent, rgba(245, 240, 253, 0.8), transparent);
+	background-image: linear-gradient(
+		to right,
+		transparent,
+		rgba(245, 240, 253, 0.8),
+		transparent
+	);
 	border-radius: 25px;
 	transform: scale(1.05);
 }
@@ -249,9 +296,13 @@ section {
     MARK: - Footer Styling
     ========== */
 footer {
-	background-image: linear-gradient(to top, #fde5e5, rgba(232, 223, 246, 0.9)); /* Mirrors header gradient */
+	background-image: linear-gradient(
+		to top,
+		#fde5e5,
+		rgba(232, 223, 246, 0.9)
+	); /* Mirrors header gradient */
 	padding: 40px 20px;
-	font-family: 'Lora', serif;
+	font-family: "Lora", serif;
 	color: #333;
 	border-top: 2px solid #983670; /* Matches header border */
 	box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow upward */

@@ -1,7 +1,9 @@
+// Load external HTML content into a section by ID
 async function loadSection(id, file) {
     try {
         const response = await fetch(file);
-        if (!response.ok) throw new Error(`Failed to load ${file}: ${response.status}`);
+        if (!response.ok)
+            throw new Error(`Failed to load ${file}: ${response.status}`);
         const content = await response.text();
         const element = document.getElementById(id);
         if (element) {
@@ -9,17 +11,18 @@ async function loadSection(id, file) {
         } else {
             console.error(`Element with ID '${id}' not found`);
         }
-        return true; // Return success indication
+        return true;
     } catch (error) {
         console.error(error.message);
         return false;
     }
 }
 
+// Add pie selection and removal logic
 function addPieSelectionListeners() {
     const addPieBtn = document.getElementById("add-pie");
     if (addPieBtn) {
-        addPieBtn.addEventListener("click", function () {
+        addPieBtn.addEventListener("click", () => {
             const container = document.getElementById("pie-selection-container");
             if (!container) {
                 console.error("Pie selection container not found");
@@ -43,22 +46,21 @@ function addPieSelectionListeners() {
 
             container.appendChild(newSelection);
         });
-    } else {
-        console.error("Add pie button not found");
     }
 
-    // Remove Pie Option - using event delegation
-    document.addEventListener("click", function (event) {
+    // Event delegation for removing pie options
+    document.addEventListener("click", (event) => {
         if (event.target.classList.contains("remove-pie")) {
             event.target.parentElement.remove();
         }
     });
 }
 
+// Add scrolling animation to scroller elements
 function addAnimation() {
-    const scrollers = document.querySelectorAll('.scroller');
+    const scrollers = document.querySelectorAll(".scroller");
     scrollers.forEach((scroller) => {
-        if (scroller.getAttribute("data-animated")) return; // Skip if already animated
+        if (scroller.getAttribute("data-animated")) return;
 
         scroller.setAttribute("data-animated", true);
         const scrollerInner = scroller.querySelector(".scroller__inner");
@@ -73,20 +75,57 @@ function addAnimation() {
     });
 }
 
-window.addEventListener('DOMContentLoaded', async () => {
-    // Load all sections
-    await Promise.all([
-        loadSection('home', '../public/Layout/hero.html'),
-        loadSection('products', '../public/Layout/product.html'),
-        loadSection('about', '../public/Layout/aboutMe.html'),
-        loadSection('features', '../public/Layout/features.html'),
-        loadSection('order', '../public/Layout/orderForm.html'),
-        loadSection('testimonials', '../public/Layout/testimonials.html')
+// Add scroll button functionality to feature section
+function addFeatureScrollListeners() {
+    const scrollContainer = document.querySelector(".pies-scroll-container");
+    const leftBtn = document.querySelector(".left-btn");
+    const rightBtn = document.querySelector(".right-btn");
+
+    if (!scrollContainer || !leftBtn || !rightBtn) {
+        console.warn("Feature scroll elements not found.");
+        return;
+    }
+
+    leftBtn.addEventListener("click", () => {
+        scrollContainer.scrollBy({ left: -300, behavior: "smooth" });
+    });
+
+    rightBtn.addEventListener("click", () => {
+        scrollContainer.scrollBy({ left: 300, behavior: "smooth" });
+    });
+}
+
+// Load all layout sections and initialize interactions
+window.addEventListener("DOMContentLoaded", async () => {
+    const results = await Promise.all([
+        loadSection("home", "../public/Layout/hero.html"),
+        loadSection("products", "../public/Layout/product.html"),
+        loadSection("about", "../public/Layout/aboutMe.html"),
+        loadSection("features", "../public/Layout/features.html"),
+        loadSection("order", "../public/Layout/orderForm.html"),
+        loadSection("testimonials", "../public/Layout/testimonials.html"),
     ]);
 
-    // After all sections are loaded, add specific listeners and animations
-    addPieSelectionListeners();
+    const [
+        homeLoaded,
+        productsLoaded,
+        aboutLoaded,
+        featuresLoaded,
+        orderLoaded,
+        testimonialsLoaded,
+    ] = results;
 
+    // Initialize features section interactions
+    if (featuresLoaded) {
+        addFeatureScrollListeners();
+    }
+
+    // Initialize order form interactions
+    if (orderLoaded) {
+        addPieSelectionListeners();
+    }
+
+    // Initialize animation if allowed
     if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
         addAnimation();
     }

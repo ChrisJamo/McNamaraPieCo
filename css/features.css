@@ -1,0 +1,206 @@
+/* Title */
+.title {
+    text-transform: uppercase;
+    color: gray;
+    margin-bottom: 10px;
+    font-size: 36px;
+    color: #5a2a6f;
+    text-align: center;
+    width: 100%;
+    margin-top: 30px;
+}
+
+/* Scrollable Pie Section */
+.pies-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Scrollable Pie Wrapper */
+.pies-scroll-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px 0;
+    display: flex;
+    max-width: 90%;
+    scroll-behavior: smooth;
+}
+
+/* Wrapper for Pies */
+.pies-wrapper {
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+}
+
+/* Pie Cards - Increased size */
+.pie-card {
+    display: flex;
+    width: 510px; /* Make the container wider */
+    background: white;
+    padding: 20px; /* Add more padding */
+    border-radius: 12px;
+    border: 1px solid #b3b6c2;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    white-space: normal;
+}
+
+/* Image Styling - Increased size */
+.pie-image {
+    flex: 0 0 170px; /* Bigger image container */
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.pie-image img {
+    width: 170px; /* Bigger image */
+    height: 170px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Pie Info - Adjust spacing */
+.pie-info {
+    flex: 1;
+    text-align: left;
+    padding-left: 20px; /* More spacing from the image */
+}
+
+/* Pie Title */
+.pie-info h3 {
+    font-size: 22px; /* Slightly bigger title */
+    color: #5a2a6f;
+    margin-bottom: 10px; /* Space below the title */
+}
+
+/* Subtitle */
+.subtitle {
+    font-size: 16px;
+    font-weight: bold;
+    color: #51607b;
+    margin-bottom: 10px; /* Space below the subtitle */
+}
+
+/* Description */
+.description {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 15px; /* More space before the price */
+}
+
+/* Price */
+.price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #3b4a68;
+}
+
+.price span {
+    color: #e49b0f;
+}
+
+.price a {
+    text-decoration: none;
+    color: #5a2a6f;
+    font-weight: bold;
+}
+
+/* Scrollbar */
+.pies-scroll-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.pies-scroll-container::-webkit-scrollbar-thumb {
+    background: #5a2a6f;
+    border-radius: 5px;
+}
+
+.pies-scroll-container::-webkit-scrollbar-track {
+    background: #d3d8e0;
+}
+
+/* Arrow Buttons */
+.scroll-btn {
+    background-color: #5a2a6f;
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.left-btn {
+    left: 10px;
+}
+
+.right-btn {
+    right: 10px;
+}
+
+/* Quiz Section */
+.quiz-section {
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 100px auto 0; /* Increased top margin */
+}
+
+/* Quiz Button */
+/* Quiz Section - Smaller and Centered */
+.quiz-section {
+    padding: 25px 15px; /* Reduce padding */
+    text-align: center;
+    border-radius: 10px;
+    max-width: 500px; /* Make it slightly smaller */
+    margin: 60px auto 0; /* Reduce top margin */
+    background: #f8f9fa; /* Keep it light */
+}
+
+/* Quiz Title */
+.quiz-section h3 {
+    font-size: 25px; /* Make it smaller */
+    color: #5a2a6f;
+    margin-bottom: 8px; /* Reduce space */
+}
+
+/* Quiz Description */
+.quiz-section p {
+    font-size: 20px; /* Slightly smaller text */
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Quiz Button - Bigger and Nicer */
+.quiz-button {
+    background: #5a2a6f; /* Match the primary color */
+    border: 2px solid #5a2a6f; /* Border matches the button color */
+    border-radius: 25px; /* Slightly rounder corners */
+    padding: 12px 24px; /* Increase padding for a bigger button */
+    font-size: 18px; /* Larger font size */
+    font-weight: bold;
+    color: white; /* White text on purple background */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.quiz-button:hover {
+    transform: scale(1.05); /* Slightly grow the button on hover */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* More prominent shadow */
+    border-color: #5a2a6f; /* Keep the border color the same */
+}
+
+.quiz-button:active {
+    transform: scale(1); /* Reset to original size when clicked */
+    box-shadow: 0 0 15px rgba(72, 20, 58, 0.5);
+    background-color: rgba(72, 20, 58, 0.05);
+}

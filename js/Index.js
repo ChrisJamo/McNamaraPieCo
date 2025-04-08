@@ -35,6 +35,22 @@ document.addEventListener("mousemove", function (event) {
 	}
 });
 
+// Mohammad feature treats
+// Scroll buttons functionality for the pie section
+document.addEventListener("DOMContentLoaded", function () {
+	const scrollContainer = document.querySelector(".pies-scroll-container");
+	const leftBtn = document.querySelector(".left-btn");
+	const rightBtn = document.querySelector(".right-btn");
+
+	leftBtn.addEventListener("click", () => {
+		scrollContainer.scrollBy({ left: -300, behavior: "smooth" });
+	});
+
+	rightBtn.addEventListener("click", () => {
+		scrollContainer.scrollBy({ left: 300, behavior: "smooth" });
+	});
+});
+
 //For NavBar effect
 document.addEventListener("DOMContentLoaded", () => {
 	const sections = document.querySelectorAll("section[id]");
@@ -67,3 +83,23 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 	});
 });
+
+// for the Feature section
+setTimeout(() => {
+	const scrollContainer = document.querySelector(".pies-scroll-container");
+	const leftBtn = document.querySelector(".left-btn");
+	const rightBtn = document.querySelector(".right-btn");
+
+	if (!scrollContainer || !leftBtn || !rightBtn) {
+		console.warn("Scroll elements not found!");
+		return;
+	}
+
+	leftBtn.addEventListener("click", () => {
+		scrollContainer.scrollBy({ left: -300, behavior: "smooth" });
+	});
+
+	rightBtn.addEventListener("click", () => {
+		scrollContainer.scrollBy({ left: 300, behavior: "smooth" });
+	});
+}, 300); // Delay a bit to let Dynamic-Loader finish

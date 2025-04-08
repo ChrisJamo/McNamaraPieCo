@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Which Pie Are You? - McNamara Pie Quiz</title>
+    <link rel="stylesheet" href="../css/piequiz.css" />
+</head>
+<body>
+
+<div class="page-wrapper">
+<!-- Header Section -->
+<header>
+    <div class="header-row">
+        <img src="./Images/ImagesForMcNamaraPieQuizFinalVersion/LeftSidePies.png" class="side-pies" alt="Left pies">
+        <img src="./Images/ImagesForMcNamaraPieQuizFinalVersion/RightSidePies.png" class="side-pies right" alt="Right pies">
+    </div>
+
+    <h1>WHICH PIE ARE YOU?</h1>
+    <img src="./Images/ImagesForMcNamaraPieQuizFinalVersion/Pie.png" alt="Pie icon" class="center-pie-icon" />
+    <h2>THE OFFICIAL MCNAMARA PIE QUIZ</h2>
+</header>
+
+
+<!--&lt;!&ndash; Quiz Section &ndash;&gt;-->
+<!--<form id="quiz-form" class="quiz-grid">-->
+
+<form id="quiz-form">
+    <div class="quiz-grid">
+
+    <!-- Left Column -->
+    <div class="quiz-column">
+        <label>
+            1) What’s your go-to comfort food?
+            <select name="comfort" required>
+                <option value="">-- Select --</option>
+                <option value="chocolate">Chocolate 🍫</option>
+                <option value="fruit">Fresh fruit 🍎</option>
+                <option value="creamy">Creamy desserts 🍰</option>
+                <option value="sticky">Sweet & sticky 🍯</option>
+            </select>
+        </label>
+
+        <label>
+            2) How do you feel right now?
+            <select name="mood" required>
+                <option value="">-- Select --</option>
+                <option value="excited">Excited & energetic 🎉</option>
+                <option value="cozy">Cozy & nostalgic 🍂</option>
+                <option value="sweet">In the mood for sweet 🍭</option>
+                <option value="refreshing">Refreshing & light ☀️</option>
+            </select>
+        </label>
+
+        <label>
+            3) Do you love chocolate?
+            <select name="chocolate" required>
+                <option value="">-- Select --</option>
+                <option value="yes">Yes ❤️</option>
+                <option value="no">No ❌</option>
+            </select>
+        </label>
+    </div>
+
+    <!-- Right Column -->
+    <div class="quiz-column">
+        <label>
+            4) What ingredients do you NEED in your pie?
+            <select name="ingredient" required>
+                <option value="">-- Select --</option>
+                <option value="apples">Apples 🍏</option>
+                <option value="chocolate">Chocolate 🍫</option>
+                <option value="berries">Berries 🍓</option>
+                <option value="coconut">Coconut 🥥</option>
+                <option value="citrus">Citrus 🍋</option>
+            </select>
+        </label>
+
+        <label>
+            5) What’s your favorite season?
+            <select name="season" required>
+                <option value="">-- Select --</option>
+                <option value="spring">Spring 🌸</option>
+                <option value="summer">Summer ☀️</option>
+                <option value="fall">Fall 🍂</option>
+                <option value="winter">Winter ❄️</option>
+            </select>
+        </label>
+
+        <label>
+            6) Do you prefer sweet, salty, or both?
+            <select name="taste" required>
+                <option value="">-- Select --</option>
+                <option value="sweet">Sweet 🍬</option>
+                <option value="salty">Salty 🧂</option>
+                <option value="both">Both 🍫</option>
+            </select>
+        </label>
+    </div>
+
+    <!-- Slider -->
+    <div class="slider-container">
+        <label for="whipped-slider">7) On a scale of 1–10, how important is whipped cream?</label>
+        <input type="range" name="whipped" id="whipped-slider" min="1" max="10" value="5"/>
+        <span id="whipped-value">5</span>
+    </div>
+
+    <!-- Buttons -->
+    <div class="button-container">
+        <button type="button" onclick="calculatePie()">SEE YOUR PIE MATCH!</button>
+        <button type="reset" onclick="goBack()">EXIT QUIZ</button>
+    </div>
+
+    <!-- Result -->
+    <div id="result" class="hidden">
+        <h3>Your Perfect Pie Is: <span id="pie-match"></span>! ($<span id="pie-price"></span>)</h3>
+        <button class="order-button" onclick="orderPie()">ORDER NOW</button>
+    </div>
+    </div>
+</form>
+
+<!-- Footer -->
+<footer>
+<!--    <img src="ImagesForMcNamaraPieQuizFinalVersion/BackgroundQuiz.jpg" alt="footer wave" class="footer-wave"/>-->
+    <p>📧 mcnamarapieco@gmail.com<br>📞 519-919-2285</p>
+</footer>
+</div>
+
+<script src="../js/piequiz.js"></script>
+</body>
+</html>

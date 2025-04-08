@@ -1,0 +1,285 @@
+/* General Layout */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Georgia', serif;
+    background-color: #fff;
+    color: #3a2d45;
+}
+
+.page-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/*!* Header Layout *!*/
+/*header {*/
+/*    text-align: center;*/
+/*    position: relative;*/
+/*    margin-top: -100px; !* This moves the entire header up *!*/
+/*}*/
+
+header {
+    text-align: center;
+    position: relative;
+    top: -80px; /* Adjust this value until it hugs the top nicely */
+}
+
+
+/* Top row with left/right pies */
+.header-row {
+    position: relative;
+    height: 100px;
+    margin-bottom: 0;
+}
+
+/* Left pie image */
+/*.side-pies {*/
+/*    position: absolute;*/
+/*    top: 100px;*/
+/*    height: 100px;*/
+/*}*/
+
+.side-pies {
+    position: fixed;
+    top: 0;        /* ✅ puts the images at the very top of the page */
+    height: 80px;
+    z-index: 1;
+}
+
+
+/* Right pie image */
+.side-pies.right {
+    right: 0;
+}
+
+/* Left pie image positioning */
+.side-pies:not(.right) {
+    left: 0;
+}
+
+/* Pie icon between headings */
+.center-pie-icon {
+    width: 220px;
+    margin: 5px auto;
+    display: block;
+}
+
+/* Headings */
+h1 {
+    font-size: 1.8rem;
+    margin: 0;
+    padding: 0;
+    color: #49256c;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin: 0;
+    padding-bottom: 10px;
+    color: #6b5b85;
+}
+
+/* Quiz Grid Layout */
+
+form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.quiz-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    gap: 30px;
+    margin-top: -20px; /* 👈 Add this line to push the quiz down */
+    margin-left: 25px;
+    color: #4e2a84;
+}
+
+/* Quiz Column Styling */
+.quiz-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 280px;
+}
+
+/* Dropdown Styles */
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #bbb;
+    border-radius: 10px;
+    background-color: #e3d6f4;
+    font-size: 1rem;
+    color: #3a2d45;
+}
+
+/* Labels for dropdowns */
+label {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-weight: bold;
+}
+
+/* Whipped Cream Slider Container */
+.slider-container {
+    width: 100%;
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Slider Base Styles (applies to all browsers) */
+input[type=range] {
+    width: 60%;
+    margin: 10px auto;
+    display: block;
+    background: transparent; /* Needed for custom track colors */
+    -webkit-appearance: none; /* For Safari & Chrome */
+}
+
+/* Track background */
+input[type=range]::-webkit-slider-runnable-track {
+    height: 8px;
+    border-radius: 4px;
+    background-color: transparent; /* fallback base color */
+}
+
+
+/* Thumb styling */
+input[type=range]::-webkit-slider-thumb {
+    background-color: #e3d6f4;
+    border: 2px solid #664d85;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -8px;
+}
+
+
+
+/* Whipped cream number */
+#whipped-value {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Button Layout */
+.button-container {
+    text-align: center;
+    margin-top: 10px;
+    margin-left: -25px; /* 👈 Nudge left — adjust value as needed */
+}
+
+/* Buttons */
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    width: 200px; /* 👈 Make all buttons the same width */
+    border-radius: 20px;
+    border: 1px solid #5e437d;
+    background-color: #e3d6f4;
+    color: #5e437d;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #5e437d;
+    color: white;
+}
+
+/* Order Now Button */
+.order-button {
+    background-color: #3f2d5c;
+    color: white;
+    margin-top: 10px;
+}
+
+/* Quiz Result Display */
+#result {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Clean up spacing from hidden result */
+.hidden {
+    display: none;
+    height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Footer Styling */
+footer {
+    background: url("ImagesForMcNamaraPieQuizFinalVersion/BackgroundQuiz.jpg") no-repeat center bottom;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #4d3e5e;
+    flex-shrink: 0;
+
+    height: 340px;         /* ⬅️ increase height to fit the wave fully */
+    padding-top: 200px;     /* ⬅️ moves text up to make room for the wave */
+    box-sizing: border-box;
+}
+
+
+.footer-wave {
+    width: 100%;
+    height: 80px;
+    margin: 0;
+    display: block;
+}
+
+/* Responsive Design */
+/* Hide side pies on smaller screens */
+@media (max-width: 768px) {
+    .side-pies {
+        display: none;
+    }
+    .quiz-grid {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+    }
+
+    .quiz-column {
+        min-width: 90%;
+    }
+
+    .button-container {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+    }
+
+    button {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .slider-container input[type="range"] {
+        width: 90%;
+    }
+    footer {
+        padding-top: 280px; /* ⬅️ push the text lower into the wave */
+        font-size: 1rem;     /* optional: make text slightly smaller */
+    }
+}
+

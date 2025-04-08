@@ -1,76 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lora&display=swap');
 
-/* ==========================
-   MARK: - About Me Section
-   ========================== */
-.container {
-    position: relative;
-    text-align: center;
-    background-image: url("../public/Images/ImagesAboutMe/AboutMe.jpg");
-    background-size: cover;
-    background-position: center bottom; /* Positions the image at the bottom */
-    background-repeat: no-repeat;
-    min-height: 90vh;
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* About Me Heading */
-.about-heading {
-    font-size: 36px;
-    color: #5a2a6f;
-    text-align: center;
-    width: 100%;
+body {
+    font-family: 'Georgia', serif;
+    color: #3b1d38;
+    background-color: white;
 }
 
-/* About Me Container */
 .about-container {
     position: relative;
+    min-height: 100vh;
+    padding-bottom: 200px; /* space for footer wave */
+    overflow-x: hidden;
+    margin-top: -20px; /* ← pulls everything up slightly */
+}
+
+/* Spoon image top-right */
+.spoon {
+    position: absolute;
+    top: -30px;
+    right: 5px;
+    width: 200px;
+    opacity: 0.3;
+    z-index: 1;
+}
+
+.content-wrapper {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Pushes content left and right */
-    padding: 50px;
+    justify-content: center;
+    padding: 20px 20px 60px;
+    position: relative;
+    z-index: 2;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
 }
 
-/* About Me Text */
-.about-text {
-    max-width: 50%;
-    padding: 20px;
-    text-align: left;
+.profile-pic {
+    position: relative;
+    top: 60px;
+    margin-left: -100px;
+    padding-top: 5px;   /* add space above */
+    padding-bottom: 40px; /* add space below */
+    display: inline-block;
 }
 
-.about-text h2 {
-    font-size: 32px;
+/* Profile Picture */
+.profile-pic img {
+    border: 6px solid #5a2a6f;
+    border-radius: 20px;
+    max-width: 480px;
+    background: #5a2a6f;
+}
+
+/*!* Heading stays near the top *!*/
+.about-title {
+    font-size: 2.5rem;
     color: #5a2a6f;
-    text-align: center;
-    width: 100%;
-    margin-top: 0; /* Adjusts spacing at the top */
+    font-family: "Abril Fatface", cursive;
+    position: relative;
+    top: 30px; /* ← this will move it UP */
+    margin-bottom: 150px;
+}
+
+.about-text {
+    flex: 1;
+    margin-left: 40px;
+    min-width: 300px;
+    padding-top: 5px; /* ← pushes content down */
+    text-align: center; /* center everything in about-text */
+    position: relative;
 }
 
 .about-text p {
-    font-size: 18px;
-    color: #333;
-    line-height: 1.6;
-    text-align: left;
+    font-family: 'Lora', serif;
+    font-size: 1.2rem;         /* ↓ Smaller size than 1.2rem */
+    line-height: 1.8;           /* ↑ Taller line spacing for elegance */
+    margin-bottom: 5px;
+    max-width: 580px;           /* ↓ Limits the line length */
+    margin-left: auto;          /* Center the block */
+    margin-right: auto;
+    transform: translateX(20px); /* ← move 20px to the right */
 }
 
-/* About Me Image */
-.about-image {
+/* Paragraph section starts lower */
+.about-paragraph {
+    margin-top: 100px; /* ← pushes the text body down */
+}
+
+.signature {
+    font-weight: bold;
+    font-style: italic;
+    text-align: right;
+    margin-top: 20px;
+}
+
+/* Footer */
+.footer {
     position: absolute;
-    right: -10px; /* Moves it further to the right */
-    top: 0; /* Moves the image higher up */
-    width: 36%; /* Adjust size as needed */
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: #5a2a6f;
+    font-size: 1rem;
 }
 
-.about-image img {
-    max-width: 100%;
-    height: auto;
+.wave {
+    width: 100%;
+    display: block;
 }
+
+.footer-text {
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+    font-size: 1.1rem;
+}
+
+.footer-text p {
+    margin: 4px;
+}
+
+.icon {
+    margin-right: 6px;
+}
+
 @media (max-width: 768px) {
-    .about-container {
-        flex-direction: column;
+    .content-wrapper {
+        flex-direction: column-reverse; /* 🔁 flip the order (text first, image second) */
+        align-items: center;
+        padding: 40px 20px;
+    }
+
+    .profile-pic {
+        margin-left: 0;
+        top: 0;
+        margin-top: 30px;
+        margin-bottom: 0;
+        text-align: center; /* ✅ Center the image inside the div */
+    }
+
+    .profile-pic img {
+        max-width: 80%;
+        display: inline-block; /* ✅ Ensures image respects text-align */
+    }
+
+    .about-text {
+        margin-left: 0;
+        padding-top: 0;
         text-align: center;
     }
 
-    .about-text,
-    .about-image {
-        max-width: 100%;
+    .about-text p {
+        max-width: 90%;
+        font-size: 1.05rem;
+        transform: none;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .signature {
+        text-align: center;
+        margin-right: 0;
+    }
+
+    .spoon {
+        display: none; /* 🚫 hide the spoon image entirely on mobile */
+    }
+
+    .profile-pic img {
+        max-width: 80%;
+    }
+
+    .about-title {
+        font-size: 2rem;
+        margin-bottom: 60px;
+        top: 0;
+    }
+
+    .footer {
+        position: relative;
+        padding-top: 0;
+        padding-bottom: 40px;
+        background-color: white;
+    }
+
+    .footer-text {
+        position: relative;
+        bottom: auto;
+        font-size: 1rem;
+        padding: 10px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 650px;
+    }
+
+    .footer-text p {
+        margin: 2px 0; /* reduce space between lines */
+        word-break: break-word;
+    }
+
+    .wave {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin-bottom: -500px;
     }
 }
+
+

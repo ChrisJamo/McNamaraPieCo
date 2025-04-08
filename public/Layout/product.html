@@ -1,3 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Products</title>
+    <link rel="stylesheet" href="../css/styles.css"/>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
 <h2>Our Products</h2>
 <p>Check out our amazing selection of pies.</p>
 
@@ -6,88 +20,180 @@
     <!-- Row 1 -->
     <div class="product-row">
         <div class="product">
-            <img src="Images/pieTest.png" alt="Product 1" />
-
-            <p class="price">$40</p>
-            <h3>Lemon Pie</h3>
-
-            <button class="products-discover-button">Discover</button>
-            <button class="products-placeOrder-button">Place Order</button>
+            <img src="Images/productsImages/CoconutCreamPie.png" alt="Product 1" />
+            <p class="price">$25</p>
+            <h3>Coconut Cream Pie</h3>
+            <label class="details-label">
+                <input type="checkbox" class="popup-toggle"/>
+                <span class="products-discover-button">Details</span>
+                <div class="product-details-popup">
+                    A tropical classic with rich coconut custard and whipped cream topping.
+                </div>
+            </label>
+            <button class="products-placeOrder-button" onclick="window.location.href='#order'">Place Order</button>
         </div>
-
         <div class="product">
-            <img src="Images/pieTest.png" alt="Product 2" />
-
-            <p class="price">$40</p>
-            <h3>Lemon Pie</h3>
-
-            <button class="products-discover-button">Discover</button>
-            <button class="products-placeOrder-button">Place Order</button>
+            <img src="Images/productsImages/ChocolateCreamPie.png" alt="Product 2" />
+            <p class="price">$25</p>
+            <h3>Chocolate Cream Pie</h3>
+            <label class="details-label">
+                <input type="checkbox" class="popup-toggle"/>
+                <span class="products-discover-button">Details</span>
+                <div class="product-details-popup">
+                    Silky smooth chocolate filling in a flaky crust topped with whipped cream.
+                </div>
+            </label>
+            <button class="products-placeOrder-button" onclick="window.location.href='#order'">Place Order</button>
         </div>
-
         <div class="product">
-            <img src="Images/pieTest.png" alt="Product 3" />
-
-            <p class="price">$40</p>
-            <h3>Lemon Pie</h3>
-
-            <button class="products-discover-button">Discover</button>
-            <button class="products-placeOrder-button">Place Order</button>
+            <img src="Images/productsImages/PecanPie.png" alt="Product 3" />
+            <p class="price">$30</p>
+            <h3>Pecan Pie</h3>
+            <label class="details-label">
+                <input type="checkbox" class="popup-toggle"/>
+                <span class="products-discover-button">Details</span>
+                <div class="product-details-popup">
+                    Southern-style pie packed with crunchy pecans in a gooey filling.
+                </div>
+            </label>
+            <button class="products-placeOrder-button" onclick="window.location.href='#order'">Place Order</button>
         </div>
-
         <div class="product">
-            <img src="Images/pieTest.png" alt="Product 4" />
-
-            <p class="price">$40</p>
-            <h3>Lemon Pie</h3>
-
-            <button class="products-discover-button">Discover</button>
-            <button class="products-placeOrder-button">Place Order</button>
+            <img src="Images/productsImages/KeyLimePie.png" alt="Product 4" />
+            <p class="price">$30</p>
+            <h3>Key Lime Pie</h3>
+            <label class="details-label">
+                <input type="checkbox" class="popup-toggle"/>
+                <span class="products-discover-button">Details</span>
+                <div class="product-details-popup">
+                    Tart and creamy key lime filling in a buttery graham crust.
+                </div>
+            </label>
+            <button class="products-placeOrder-button" onclick="window.location.href='#order'">Place Order</button>
         </div>
     </div>
 
     <!-- Row 2 -->
     <div class="product-row">
         <div class="product">
-            <img src="Images/pieTest.png" alt="Product 5" />
-
-            <p class="price">$40</p>
-            <h3>Lemon Pie</h3>
-
-            <button class="products-discover-button">Discover</button>
-            <button class="products-placeOrder-button">Place Order</button>
+            <img src="Images/productsImages/BananaCreamPie.png" alt="Product 5" />
+            <p class="price">$25</p>
+            <h3>Banana Cream Pie</h3>
+            <label class="details-label">
+                <input type="checkbox" class="popup-toggle"/>
+                <span class="products-discover-button">Details</span>
+                <div class="product-details-popup">
+                    Fresh bananas in a creamy vanilla custard layered with whipped cream.
+                </div>
+            </label>
+            <button class="products-placeOrder-button" onclick="window.location.href='#order'">Place Order</button>
         </div>
-
         <div class="product">
-            <img src="Images/pieTest.png" alt="Product 6" />
-
-            <p class="price">$40</p>
-            <h3>Lemon Pie</h3>
-
-            <button class="products-discover-button">Discover</button>
-            <button class="products-placeOrder-button">Place Order</button>
+            <img src="Images/productsImages/LemonMeringuePie.png" alt="Product 6" />
+            <p class="price">$25</p>
+            <h3>Lemon Meringue Pie</h3>
+            <label class="details-label">
+                <input type="checkbox" class="popup-toggle"/>
+                <span class="products-discover-button">Details</span>
+                <div class="product-details-popup">
+                    Zesty lemon filling topped with fluffy, golden meringue.
+                </div>
+            </label>
+            <button class="products-placeOrder-button" onclick="window.location.href='#order'">Place Order</button>
         </div>
-
         <div class="product">
-            <img src="Images/pieTest.png" alt="Product 7" />
-
-            <p class="price">$40</p>
-            <h3>Lemon Pie</h3>
-
-            <button class="products-discover-button">Discover</button>
-            <button class="products-placeOrder-button">Place Order</button>
+            <img src="Images/productsImages/SaltedCaramelApple.png" alt="Product 7" />
+            <p class="price">$25</p>
+            <h3>Salted Caramel Apple</h3>
+            <label class="details-label">
+                <input type="checkbox" class="popup-toggle"/>
+                <span class="products-discover-button">Details</span>
+                <div class="product-details-popup">
+                    Sweet-tart apples drizzled with salted caramel and baked to perfection.
+                </div>
+            </label>
+            <button class="products-placeOrder-button" onclick="window.location.href='#order'">Place Order</button>
         </div>
-
         <div class="product">
-            <img src="Images/pieTest.png" alt="Product 8" />
-
-            <p class="price">$40</p>
-            <h3>Lemon Pie</h3>
-
-            <button class="products-discover-button">Discover</button>
-            <button class="products-placeOrder-button">Place Order</button>
+            <img src="Images/productsImages/MixedBerriesPie.png" alt="Product 8" />
+            <p class="price">$25</p>
+            <h3>Mixed Berries</h3>
+            <label class="details-label">
+                <input type="checkbox" class="popup-toggle"/>
+                <span class="products-discover-button">Details</span>
+                <div class="product-details-popup">
+                    Bursting with strawberries, raspberries, blueberries, and blackberries.
+                </div>
+            </label>
+            <button class="products-placeOrder-button" onclick="window.location.href='#order'">Place Order</button>
         </div>
     </div>
 
-    <button class="products-morePies-button">More Pies →</button>
+    <!-- Row 3 (Initially Hidden) -->
+    <div class="product-row hidden" id="extra-row">
+        <div class="product">
+            <img src="Images/productsImages/CherryPie.png" alt="Product 9" />
+            <p class="price">$25</p>
+            <h3>Cherry Pie</h3>
+            <label class="details-label">
+                <input type="checkbox" class="popup-toggle"/>
+                <span class="products-discover-button">Details</span>
+                <div class="product-details-popup">
+                    Classic cherry pie with a golden flaky crust.
+                </div>
+            </label>
+            <button class="products-placeOrder-button" onclick="window.location.href='#order'">Place Order</button>
+        </div>
+        <div class="product">
+            <img src="Images/productsImages/StrawberryPie.png" alt="Product 10" />
+            <p class="price">$25</p>
+            <h3>Strawberry Pie</h3>
+            <label class="details-label">
+                <input type="checkbox" class="popup-toggle"/>
+                <span class="products-discover-button">Details</span>
+                <div class="product-details-popup">
+                    Sweet strawberries in glaze over a crisp crust.
+                </div>
+            </label>
+            <button class="products-placeOrder-button" onclick="window.location.href='#order'">Place Order</button>
+        </div>
+        <div class="product">
+            <img src="Images/productsImages/BlueberryPie.png" alt="Product 11" />
+            <p class="price">$25</p>
+            <h3>Blueberry Pie</h3>
+            <label class="details-label">
+                <input type="checkbox" class="popup-toggle"/>
+                <span class="products-discover-button">Details</span>
+                <div class="product-details-popup">
+                    Sweet and juicy blueberries baked in a golden crust.
+                </div>
+            </label>
+            <button class="products-placeOrder-button" onclick="window.location.href='#order'">Place Order</button>
+        </div>
+        <div class="product">
+            <img src="Images/productsImages/PumpkinPie.png" alt="Product 12" />
+            <p class="price">$25</p>
+            <h3>Pumpkin Pie</h3>
+            <label class="details-label">
+                <input type="checkbox" class="popup-toggle"/>
+                <span class="products-discover-button">Details</span>
+                <div class="product-details-popup">
+                    Traditional holiday pie with spiced pumpkin filling.
+                </div>
+            </label>
+            <button class="products-placeOrder-button" onclick="window.location.href='#order'">Place Order</button>
+        </div>
+    </div>
+
+    <!-- More Pies Button -->
+    <button class="products-morePies-button" onclick="document.getElementById('extra-row').classList.remove('hidden'); this.style.display='none';">More Pies →</button>
+
+    <label class ="disclaimer-label">
+        <img src="Images/productsImages/PeanutFree.png" alt="PEANUT FREE" />
+        <p><b>Disclaimer: Our kitchen is peanut-free</b></p>
+    </label>
+
 </section>
+
+</body>
+</html>

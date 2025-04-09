@@ -34,11 +34,19 @@ function addPieSelectionListeners() {
 
             newSelection.innerHTML = `
                 <select required aria-label="Pie selection">
-                    <option value="">Pick your pie</option>
-                    <option value="apple">Apple Pie</option>
-                    <option value="blueberry">Blueberry Pie</option>
-                    <option value="cherry">Cherry Pie</option>
-                    <option value="pecan">Pecan Pie</option>
+                   <option value="">Pick your pie</option>
+                    <option value="Coconut Cream Pie">Coconut Cream Pie</option>
+                    <option value="Chocolate Cream Pie">Chocolate Cream Pie</option>
+                    <option value="Pecan Pie">Pecan Pie</option>
+                    <option value="Key Lime Pie">Key Lime Pie</option>
+                    <option value="Banana Cream Pie">Banana Cream Pie</option>
+                    <option value="Lemon Meringue Pie">Lemon Meringue Pie</option>
+                    <option value="Salted Caramel Apple">Salted Caramel Apple</option>
+                    <option value="Mixed Berries">Mixed Berries</option>
+                    <option value="Cherry Pie">Cherry Pie</option>
+                    <option value="Strawberry Pie">Strawberry Pie</option>
+                    <option value="Blueberry Pie">Blueberry Pie</option>
+                    <option value="Pumpkin Pie">Pumpkin Pie</option>
                 </select>
                 <input type="number" min="1" value="1" required aria-label="Quantity" />
                 <button type="button" class="remove-pie">Remove</button>
@@ -56,7 +64,7 @@ function addPieSelectionListeners() {
     });
 }
 
-// Add scrolling animation to scroller elements
+// Add scrolling animation to scroller elements TESTIMONIALS section
 function addAnimation() {
     const scrollers = document.querySelectorAll(".scroller");
     scrollers.forEach((scroller) => {

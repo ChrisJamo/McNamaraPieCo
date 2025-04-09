@@ -6,7 +6,6 @@
 	text-align: center;
 	padding: 5rem 0;
 	background-image: url("../public/Images/mainImages/BackgtoundGradiendt.png");
-	background-size: 100% auto;
 	background-size: cover;
 	background-position: center bottom;
 	/* background-position: top center;
@@ -17,7 +16,7 @@
 /* Centering the Hero Content */
 .hero-container {
 	position: absolute;
-	top: 30%;
+	top: 25%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	text-align: center;
@@ -28,7 +27,6 @@
 .hero-header {
 	position: relative;
 	display: inline-block;
-	margin-top: 80px;
 }
 
 /* Heading Styles */
@@ -75,11 +73,11 @@
 
 .social-icons-mobile a {
 	background: #5b2245;
+	display: flex;
 	color: white;
 	border-radius: 50%;
 	width: 40px;
 	height: 40px;
-	display: flex;
 	align-items: center;
 	justify-content: center;
 	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
@@ -213,25 +211,25 @@
 	position: absolute;
 	left: 5%; /* Consistently align from the left */
 	top: 65%; /*  Mid-level vertical anchor */
-	transform: translateY(-50%);
-	max-width: 408px;
+	transform: translateY(-45%);
+	max-width: 380px;
 	z-index: 1; /* In case it gets behind content */
 }
 
 .left-side-image img {
-	width: 100%;
+	width: 90%;
 	height: auto;
 }
 
 .right-side-image {
 	position: absolute;
-	right: -5%;
+	right: 0;
 	top: 44%;
-	transform: translateY(-50%);
-	max-width: 480px;
+	transform: translateY(-25%);
+	max-width: 450px;
 }
 .right-side-image img {
-	width: 78%;
+	width: 80%;
 	height: auto;
 }
 
@@ -243,8 +241,7 @@
 	font-size: 20px; /* Force the size */
 	color: #635682;
 	text-align: center;
-	margin-top: 100px; /* increased space below quote */
-
+	margin-top: 20px; /* increased space below quote */
 	font-weight: 700; /* Ensure bold weight */
 	transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition */
 	display: inline-block; /* To enable scaling smoothly */
@@ -297,25 +294,42 @@
    ========================== */
 
 /* Small Phones (max-width: 480px) */
-@media (max-width: 480px) {
+@media (max-width: 561px) {
 	.hero {
 		background-position: center 98%;
+		height: auto; /* Adjust height based on content */
 	}
+
 	.hero-title {
 		font-size: 1.8rem;
 	}
+
 	.hero-buttons {
 		flex-direction: row;
 	}
+
 	.cherry-icon {
 		left: 6px;
 		top: -76px;
 		width: 100px;
 	}
-	.left-side-image,
-	.right-side-image,
-	.contact-info {
-		display: none;
+
+	/* Faded cover effect for left image */
+	.left-side-image,.right-side-image {
+		display: flex;
+		max-width: 150px;
+		opacity: 0.35;
+		filter: blur(1px);
+		mix-blend-mode: multiply;
+		transition: opacity 0.3s ease;
+		z-index: 0;
+		flex-wrap: wrap;
+	}
+
+	.left-side-image .right-side-image img {
+		width: 100%;
+		height: auto;
+		object-fit: cover;
 	}
 }
 
@@ -323,6 +337,7 @@
 @media (max-width: 768px) {
 	.hero {
 		background-position: center 95%;
+		height: auto; /* Adjust height based on content */
 	}
 	header {
 		padding: 10px 16px;
@@ -330,78 +345,64 @@
 	.hero-title {
 		font-size: 2.2rem;
 	}
-	.left-side-image,
-	.right-side-image,
-	.contact-info {
-		display: none;
-	}
 }
 
-/* Tablets (max-width: 1024px) */
-@media (max-width: 1024px) {
-	.hero {
-		background-position: center 90%;
-	}
-	.left-side-image,
-	.right-side-image,
-	.contact-info,
-	.social-icons {
-		display: none;
-	}
-	.social-icons-mobile {
-		display: flex;
-	}
-}
+/*!* Small Desktop (min-width: 1022px and max-width: 1240px) *!*/
+/*@media (min-width: 1022px) and (max-width: 1240px) {*/
+/*	.hero {*/
+/*		background-size: 100% 100%;*/
+/*		background-position: bottom center;*/
+/*		height: auto; !* Adjust height based on content *!*/
+/*	}*/
+/*}*/
 
-/* Small Desktop (min-width: 1022px and max-width: 1240px) */
-@media (min-width: 1022px) and (max-width: 1240px) {
-	.hero {
-		background-size: 100% 100%;
-		background-position: bottom center;
-	}
-}
+/* Medium Desktop (min-width: 1025px and max-width: 1208px)*/
+/*@media (min-width: 1025px) and (max-width: 1208px) {*/
+/*	.left-side-image,*/
+/*	.right-side-image {*/
+/*		max-width: 320px;*/
+/*	}*/
+/*	.right-side-image img,*/
+/*	.left-side-image img {*/
+/*		width: 100%;*/
+/*	}*/
+/*}*/
 
-/* Medium Desktop (min-width: 1025px and max-width: 1208px) */
-@media (min-width: 1025px) and (max-width: 1208px) {
+/* Medium Tablets (min-width: 794px and max-width: 1024px) */
+@media (min-width: 794px) and (max-width: 1224px) {
 	.left-side-image,
 	.right-side-image {
+		display: block;
+		max-width: 450px;
+		opacity: 0.35; /* faded look */
+		filter: blur(1px); /* optional soft blur */
+		mix-blend-mode: multiply; /* blends into the background */
+		transition: opacity 0.3s ease;
+		z-index: 0; /* lower than content */
+	}
+	.left-side-image img,
+	.right-side-image img {
+		width: 100%;
+		opacity: 1;
+	}
+}
+
+/* Medium Tablets (min-width: 480px) and (max-width: 794px) */
+@media (min-width: 561px) and (max-width: 794px) {
+	.left-side-image,
+	.right-side-image {
+		display: block;
 		max-width: 320px;
-	}
-	.right-side-image img,
-	.left-side-image img {
-		width: 100%;
-	}
-}
-
-/* Medium Tablets (min-width: 794px and max-width: 1024px) */
-@media (min-width: 794px) and (max-width: 1024px) {
-	.left-side-image,
-	.right-side-image {
-		display: block;
-		max-width: 250px;
+		opacity: 0.35; /* faded look */
+		filter: blur(1px); /* optional soft blur */
+		mix-blend-mode: multiply; /* blends into the background */
+		transition: opacity 0.3s ease;
+		z-index: 0; /* lower than content */
 	}
 	.left-side-image img,
 	.right-side-image img {
 		width: 100%;
-	}
-}
-
-/* Medium Tablets (min-width: 794px and max-width: 1024px) */
-@media (min-width: 600px) and (max-width: 794px) {
-	.left-side-image,
-	.right-side-image {
-		display: block;
-		max-width: 150px;
-	}
-	.left-side-image img,
-	.right-side-image img {
-		width: 100%;
-	}
-}
-
-@media (min-width: 600px) and (max-width: 667px) {
-	.right-side-image {
-		top: 56%;
+		opacity: 1;
 	}
 }
 
@@ -428,6 +429,7 @@
 @media (min-width: 1440px) {
 	.hero {
 		background-position: center 60%;
+		height: auto; /* Adjust height based on content */
 	}
 	.hero-container {
 		top: 32%;
@@ -514,5 +516,10 @@
 		width: 60px;
 		left: 12px;
 		top: -40px;
+	}
+}
+@media (max-width: 1020px) {
+	.social-icons-mobile {
+		display: flex;
 	}
 }

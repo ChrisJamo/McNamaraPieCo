@@ -91,22 +91,7 @@
     margin-bottom: 15px; /* More space before the price */
 }
 
-/* Price */
-.price {
-    font-size: 16px;
-    font-weight: bold;
-    color: #3b4a68;
-}
 
-.price span {
-    color: #e49b0f;
-}
-
-.price a {
-    text-decoration: none;
-    color: #5a2a6f;
-    font-weight: bold;
-}
 
 /* Scrollbar */
 .pies-scroll-container::-webkit-scrollbar {
@@ -152,6 +137,7 @@
     border-radius: 10px;
     max-width: 600px;
     margin: 100px auto 0; /* Increased top margin */
+
 }
 
 /* Quiz Button */
@@ -162,7 +148,7 @@
     border-radius: 10px;
     max-width: 500px; /* Make it slightly smaller */
     margin: 60px auto 0; /* Reduce top margin */
-    background: #f8f9fa; /* Keep it light */
+    background-image: linear-gradient(to top, rgba(232, 223, 246, 0.9), #fde5e5);
 }
 
 /* Quiz Title */

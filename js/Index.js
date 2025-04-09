@@ -87,3 +87,7 @@ setTimeout(() => {
 		scrollContainer.scrollBy({ left: 300, behavior: "smooth" });
 	});
 }, 300); // Delay a bit to let Dynamic-Loader finish
+function selectPie(pieName) {
+	const pieSelect = document.getElementById('pie-selection');
+	pieSelect.value = pieName;
+}

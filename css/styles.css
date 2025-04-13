@@ -55,7 +55,6 @@ header {
 	); /* Warm gradient */
 	height: 6rem;
 	display: flex;
-	align-items: center;
 	justify-content: space-between;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Softer shadow */
 	border-bottom: 2px solid #983670; /* Thinner border for subtlety */
@@ -291,7 +290,7 @@ nav ul li.active::after {
 	 MARK: - Sections
 	 ========================== */
 section {
-	margin-top: 40px;
+	margin-top: 10%;
 	font-size: 40px;
 	justify-content: center;
 }

@@ -57,7 +57,7 @@
 
 .payment-options {
     display: flex;
-    gap: 150px;
+    gap: 20px;
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -66,14 +66,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     text-align: center;
     font-size: 14px;
     color: #333;
     cursor: pointer;
-    padding: 10px;
-    width: 20%; /* Ensures even width */
+    width: 40%; /* Ensures even width */
     min-height: 150px;
+    opacity: 0.85;
     border-radius: 8px;
     transition:
             border-color 0.3s ease,
@@ -82,8 +82,10 @@
 }
 
 .payment-options label:hover {
-    opacity: 0.85;
-    transform: scale(1.05);
+    border: 1px dashed rgba(58, 11, 71, 0.6);
+    background: linear-gradient(to top,transparent, #fde5e5);
+    opacity: 1;
+    transform: scale(1.01);
 }
 
 

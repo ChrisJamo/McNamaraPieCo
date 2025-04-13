@@ -6,16 +6,20 @@
     padding: 40px;
     max-width: 1200px;
     gap: 30px;
-    background-color: #f5f5f5; /* Softer background */
-    margin: 0 auto 1rem;
-
+    margin: 1rem auto;
+    background: linear-gradient(to top,transparent, #fde5e5);
+    border: 6px double #5a2a6f;
+    border-radius: 25px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
+
 
 /* Order Form */
 .order-form {
     flex: 1;
     padding: 30px;
     background-color: #fff;
+    border: 2px dashed rgba(58, 11, 71, 0.6);
     border-radius: 8px; /* Slightly softer corners */
     max-width: 600px;
 }
@@ -38,8 +42,8 @@
 
 /* Payment Method */
 .payment-method {
-    padding: 15px;
-    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px dashed rgba(58, 11, 71, 0.6);
     border-radius: 8px;
     margin-bottom: 20px;
 }
@@ -53,7 +57,7 @@
 
 .payment-options {
     display: flex;
-    gap: 20px;
+    gap: 150px;
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -62,26 +66,48 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
+    text-align: center;
     font-size: 14px;
     color: #333;
     cursor: pointer;
-    padding: 8px;
+    padding: 10px;
+    width: 20%; /* Ensures even width */
+    min-height: 150px;
+    border-radius: 8px;
+    transition:
+            border-color 0.3s ease,
+            transform 0.3s ease,
+            opacity 0.3s ease;
 }
 
 .payment-options label:hover {
-    opacity: 0.8; /* Simpler hover effect */
+    opacity: 0.85;
+    transform: scale(1.05);
+}
+
+
+.payment-options input[type="radio"] {
+    margin-bottom: 8px;
+    transform: scale(1.2);
 }
 
 .payment-options img {
-    width: 50px; /* Smaller for cleaner look */
-    height: auto;
-    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
     margin-bottom: 5px;
+}
+
+.payment-options span {
+    display: block;
+    margin-top: 4px;
+    font-size: 13px;
 }
 
 /* Radio Buttons */
 .payment-options input[type="radio"] {
-    margin: 5px 0;
+    margin-top: 5px;
 }
 
 /* Form Fields */
@@ -110,25 +136,28 @@ textarea {
 .name-fields, .date-time, .select-fields {
     display: flex;
     gap: 15px;
-    margin-bottom: 15px;
 }
 
 /* Button Styling */
 form button {
-    background-color: #5a2a6f;
+    background: linear-gradient(135deg, #5a2a6f, #8e44ad);
     color: white;
-    border: none;
+    border: 2px solid transparent;
     padding: 20px;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     font-size: 16px;
-    border-radius: 5px;
+    border-radius: 8px;
     width: 100%;
     cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease-in-out;
 }
 
 form button:hover {
-    background-color: #6b3483; /* Softer hover color */
+    transform: scale(1.03);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25), 0 0 10px #5a2a6f, 0 6px 20px rgba(0, 0, 0, 0.25);
 }
+
 
 /* Text Elements */
 .note, .contact-info {

@@ -48,6 +48,20 @@ function calculatePie() {
     const taste = form["taste"].value;
     const whipped = parseInt(document.getElementById("whipped-slider").value);
 
+    // ✅ Validation: Ensure all fields are answered
+    if (
+        comfort === "" ||
+        mood === "" ||
+        chocolate === "" ||
+        ingredient === "" ||
+        season === "" ||
+        taste === "" ||
+        isNaN(whipped)
+    ) {
+        alert("⚠️ You must fill out the entire quiz before seeing your pie match.");
+        return;
+    }
+
     if (ingredient === "apples") {
         piePoints["Apple Crumble"] += 5;
         piePoints["Salted Caramel Apple Pie"] += 4;
@@ -59,7 +73,9 @@ function calculatePie() {
         piePoints["Pecan Pie"] += 1;
     }
 
-    if (comfort === "chocolate") piePoints["Chocolate Cream Pie"] += 1;
+    if (comfort === "chocolate") {
+        piePoints["Chocolate Cream Pie"] += 1;
+    }
 
     if (comfort === "creamy") {
         piePoints["Banana Cream Pie"] += 1;
@@ -75,17 +91,35 @@ function calculatePie() {
         piePoints["Cherry Pie"] += 3;
     }
 
-    if (taste === "salty") piePoints["Salted Caramel Apple Pie"] += 1;
-    if (taste === "sweet" || taste === "both") piePoints["Salted Caramel Apple Pie"] += 1;
+    // BASSAM - ADD THIS.
+    if (ingredient === "coconut") {
+        piePoints["Coconut Cream Pie"] += 5;
+    }
+
+    if (taste === "salty") {
+        piePoints["Salted Caramel Apple Pie"] += 1;
+    }
+
+    if (taste === "sweet" || taste === "both") {
+        piePoints["Salted Caramel Apple Pie"] += 1;
+    }
+
     if (taste === "sweet") {
         piePoints["Chocolate Cream Pie"] += 2;
         piePoints["Banana Cream Pie"] += 2;
         piePoints["Coconut Cream Pie"] += 2;
     }
 
+    // BASSAM - ADD THIS.
+    if (comfort === "sticky") {
+        piePoints["Salted Caramel Apple Pie"] += 3;
+        piePoints["Pecan Pie"] += 2;
+    }
+
+    // BASSAM - ADD THIS TOO.
     if (ingredient === "citrus") {
-        piePoints["Lemon Meringue Pie"] += 1;
-        piePoints["Key Lime Pie"] += 1;
+        piePoints["Lemon Meringue Pie"] += 5;
+        piePoints["Key Lime Pie"] += 5;
     }
 
     if (whipped >= 8) {
@@ -103,6 +137,7 @@ function calculatePie() {
 
     let bestPie = "";
     let maxPoints = 0;
+
     for (let pie in piePoints) {
         if (piePoints[pie] > maxPoints) {
             maxPoints = piePoints[pie];
@@ -117,7 +152,14 @@ function calculatePie() {
     document.getElementById("result").classList.remove("hidden");
 }
 
+// BASSAM!!!!!!!!!!! I FIXED THIS.
 function orderPie() {
     const pie = document.getElementById("pie-match").textContent;
-    alert(`Order placed for: ${pie}`);
+    alert(`Taking you to the order form so you can order: ${pie}`);
+    window.location.href = "orderForm.html";
+}
+
+// ✅ Exit button functionality - BASSAM!!!!!!!! THIS EXIT BUTTON SHOULD BRING YOU BACK TO INDEX.HTML.
+function exitQuiz() {
+    window.location.href = "index.html";
 }

@@ -8,7 +8,7 @@
 }
 
 body {
-    font-family: 'Georgia', serif;
+    font-family: 'Lora', serif;
     color: #3b1d38;
     background-color: white;
 }
@@ -21,12 +21,12 @@ body {
     margin-top: -20px; /* ← pulls everything up slightly */
 }
 
-/* Spoon image top-right */
+/* Spoon image top-right BASSAM!!!!!!!!!!!!!!!!!!!! */
 .spoon {
     position: absolute;
-    top: -30px;
-    right: 5px;
-    width: 200px;
+    top: -145px;
+    right: 2px;
+    width: 300px;
     opacity: 0.3;
     z-index: 1;
 }
@@ -47,7 +47,7 @@ body {
     position: relative;
     top: 60px;
     margin-left: -100px;
-    padding-top: 5px;   /* add space above */
+    padding-top: 5px; /* add space above */
     padding-bottom: 40px; /* add space below */
     display: inline-block;
 }
@@ -60,7 +60,7 @@ body {
     background: #5a2a6f;
 }
 
-/*!* Heading stays near the top *!*/
+/*! Heading stays near the top !*/
 .about-title {
     font-size: 2.5rem;
     color: #5a2a6f;
@@ -81,11 +81,11 @@ body {
 
 .about-text p {
     font-family: 'Lora', serif;
-    font-size: 1.2rem;         /* ↓ Smaller size than 1.2rem */
-    line-height: 1.8;           /* ↑ Taller line spacing for elegance */
+    font-size: 1.2rem; /* ↓ Smaller size than 1.2rem */
+    line-height: 1.8; /* ↑ Taller line spacing for elegance */
     margin-bottom: 5px;
-    max-width: 580px;           /* ↓ Limits the line length */
-    margin-left: auto;          /* Center the block */
+    max-width: 580px; /* ↓ Limits the line length */
+    margin-left: auto; /* Center the block */
     margin-right: auto;
     transform: translateX(20px); /* ← move 20px to the right */
 }
@@ -102,7 +102,7 @@ body {
     margin-top: 20px;
 }
 
-/* Footer */
+/* Footer BASSAM!!!!!!!!!!!!!!!!!!!! */
 .footer {
     position: absolute;
     bottom: 0;
@@ -119,9 +119,9 @@ body {
 
 .footer-text {
     position: absolute;
-    bottom: 40px;
+    bottom: 30px;
     width: 100%;
-    font-size: 1.1rem;
+    font-size: 1.4rem;
 }
 
 .footer-text p {
@@ -140,11 +140,11 @@ body {
     }
 
     .profile-pic {
+        margin-top: 70px; /* ⬅️ Adjust this number to move the image further down */
+        margin-bottom: 10px;
         margin-left: 0;
         top: 0;
-        margin-top: 30px;
-        margin-bottom: 0;
-        text-align: center; /* ✅ Center the image inside the div */
+        text-align: center;
     }
 
     .profile-pic img {
@@ -185,35 +185,13 @@ body {
         top: 0;
     }
 
-    .footer {
-        position: relative;
-        padding-top: 0;
-        padding-bottom: 40px;
-        background-color: white;
-    }
-
+    /* BASSAM!!!!!!!!!!! Fixed Responsive Perfectly! */
     .footer-text {
-        position: relative;
-        bottom: auto;
-        font-size: 1rem;
-        padding: 10px 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 650px;
-    }
-
-    .footer-text p {
-        margin: 2px 0; /* reduce space between lines */
-        word-break: break-word;
+        font-size: 0.85rem;  /* even smaller if needed */
+        margin-top: 40px;  /* reduce space */
     }
 
     .wave {
-        width: 100%;
-        height: auto;
-        display: block;
-        margin-bottom: -500px;
+        margin-bottom: 80px;
     }
 }
-
-

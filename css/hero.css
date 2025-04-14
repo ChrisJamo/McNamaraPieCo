@@ -109,18 +109,47 @@
 		transform: translateY(0); /* Final position */
 	}
 }
+@keyframes cherryDropTwo {
+	0% {
+		opacity: 0;
+		transform: translateY(-150px); /* Start cherry from above */
+	}
+	60% {
+		opacity: 1;
+		transform: translateY(10px); /* Slight bounce below final position */
+	}
+	80% {
+		transform: translateY(-5px); /* Slight bounce above final position */
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0); /* Final position */
+	}
+}
 
 .cherry-icon {
 	position: absolute;
-	left: 46px; /* Adjust as needed */
+	left: 72px; /* Adjust as needed */
 	top: -46px; /* Final landing position */
-	width: 100px;
+	width: 80px;
 	height: auto;
 	animation: cherryDrop 1.5s ease-out forwards; /* Smooth, bouncing drop */
+}
+
+.cherry-icon-two {
+	position: absolute;
+	right: -46px; /* Adjust as needed */
+	top: 46px; /* Final landing position */
+	width: 80px;
+	height: auto;
+	animation: cherryDropTwo 1.5s ease-out forwards; /* Smooth, bouncing drop */
 }
 @media (max-width: 524px) and (min-width: 481px) {
 	.cherry-icon {
 		left: 20px;
+	}
+	.cherry-icon-two {
+		display: none;
 	}
 }
 
@@ -272,7 +301,7 @@
 	width: 18px;
 	margin-right: 6px;
 	filter: invert(18%) sepia(84%) saturate(4115%) hue-rotate(351deg)
-	brightness(85%) contrast(94%);
+		brightness(85%) contrast(94%);
 }
 
 .hero-container .contact-info:hover {
@@ -312,9 +341,13 @@
 		top: -76px;
 		width: 100px;
 	}
+	.cherry-icon-two {
+		display: none;
+	}
 
 	/* Faded cover effect for left image */
-	.left-side-image,.right-side-image {
+	.left-side-image,
+	.right-side-image {
 		display: flex;
 		max-width: 150px;
 		opacity: 0.35;
@@ -343,6 +376,13 @@
 	}
 	.hero-title {
 		font-size: 2.2rem;
+	}
+
+	.cherry-icon-two {
+		position: absolute;
+		right: -46px;
+		top: 44px;
+		width: 80px;
 	}
 }
 
@@ -383,6 +423,12 @@
 	.right-side-image img {
 		width: 100%;
 		opacity: 1;
+	}
+	.cherry-icon-two {
+		position: absolute;
+		right: -46px;
+		top: 44px;
+		width: 80px;
 	}
 }
 
@@ -447,8 +493,16 @@
 		font-size: 1.5rem;
 	}
 	.cherry-icon {
-		left: 120px;
-		top: -46px;
+		position: absolute;
+		left: 130px; /* Adjust as needed */
+		top: -46px; /* Final landing position */
+		width: 100px;
+	}
+
+	.cherry-icon-two {
+		position: absolute;
+		right: -56px; /* Adjust as needed */
+		top: 76px; /* Final landing position */
 		width: 100px;
 	}
 	.left-side-image,
@@ -463,62 +517,74 @@
 		right: 3%;
 		max-width: 650px;
 	}
-}
-
-@media (min-width: 1440px) and (max-width: 1879px) {
-	.left-side-image,
-	.right-side-image {
-		display: block;
-		max-width: 450px;
-	}
-	.left-side-image {
-		left: 5%;
-	}
-	.right-side-image {
-		right: 5%;
-	}
-	.hero-header h1 {
-		font-size: 3.2rem;
-	}
-	.hero-title {
-		font-size: 3.6rem;
-	}
-	.cherry-icon {
-		left: 86px;
-		top: -46px;
-	}
-}
-
-@media (min-width: 1444px) and (max-width: 1540px) {
-	.left-side-image {
-		left: 2%;
-	}
-	.right-side-image {
-		right: 2%;
-	}
-}
-
-@media (min-width: 320px) and (max-width: 330px) {
-	.hero-title {
-		font-size: 1.2rem;
-		line-height: 1.2;
+	.hero-container .contact-info {
+		font-size: 28px;
 	}
 
-	.hero-buttons a {
-		font-size: 0.8rem;
-		padding: 8px 12px;
-		width: auto;
-		white-space: nowrap; /* keeps text in one line */
+	@media (min-width: 1440px) and (max-width: 1879px) {
+		.left-side-image,
+		.right-side-image {
+			display: block;
+			max-width: 450px;
+		}
+		.left-side-image {
+			left: 5%;
+		}
+		.right-side-image {
+			right: 5%;
+		}
+		.hero-header h1 {
+			font-size: 3.2rem;
+		}
+		.hero-title {
+			font-size: 3.6rem;
+		}
+		.cherry-icon {
+			left: 86px;
+			top: -46px;
+		}
 	}
 
-	.cherry-icon {
-		width: 60px;
-		left: 12px;
-		top: -40px;
+	@media (min-width: 1444px) and (max-width: 1540px) {
+		.left-side-image {
+			left: 2%;
+		}
+		.right-side-image {
+			right: 2%;
+		}
+		.cherry-icon-two {
+			position: absolute;
+			right: -46px;
+			top: 64px;
+			width: 80px;
+		}
 	}
-}
-@media (max-width: 1020px) {
-	.social-icons-mobile {
-		display: flex;
+
+	@media (min-width: 320px) and (max-width: 330px) {
+		.hero-title {
+			font-size: 1.2rem;
+			line-height: 1.2;
+		}
+
+		.hero-buttons a {
+			font-size: 0.8rem;
+			padding: 8px 12px;
+			width: auto;
+			white-space: nowrap; /* keeps text in one line */
+		}
+
+		.cherry-icon {
+			width: 60px;
+			left: 12px;
+			top: -40px;
+		}
+		.cherry-icon-two {
+			display: none;
+		}
+	}
+	@media (max-width: 1020px) {
+		.social-icons-mobile {
+			display: flex;
+		}
 	}
 }

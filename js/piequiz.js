@@ -153,10 +153,15 @@ function calculatePie() {
 }
 
 // BASSAM!!!!!!!!!!! I FIXED THIS.
-function orderPie() {
+function orderPie(event) {
+    event.preventDefault(); // prevent form from submitting and reloading
+
     const pie = document.getElementById("pie-match").textContent;
     alert(`Taking you to the order form so you can order: ${pie}`);
-    window.location.href = "orderForm.html";
+
+    setTimeout(() => {
+        window.location.href = "index.html#order";
+    }, 100);
 }
 
 // ✅ Exit button functionality - BASSAM!!!!!!!! THIS EXIT BUTTON SHOULD BRING YOU BACK TO INDEX.HTML.

@@ -277,3 +277,58 @@ footer {
         margin-bottom: 30px; /* ⬅️ was 80px, now tighter */
     }
 }
+/* Responsive Design: Between 400–450px wide and 850–1000px tall */
+@media (min-width: 400px) and (max-width: 450px) and (min-height: 850px) and (max-height: 1000px) {
+    .quiz-grid {
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        padding: 5px;
+        gap: 15px;
+    }
+
+    .quiz-column {
+        min-width: 95%;
+        gap: 15px;
+    }
+
+    label {
+        font-size: 16px;
+    }
+
+    select {
+        font-size: 0.95rem;
+        padding: 8px;
+    }
+
+    .slider-container {
+        margin: 10px 0;
+    }
+
+    #whipped-value {
+        font-size: 1rem;
+    }
+
+    .button-container {
+        margin-left: 0;
+        margin-top: 5px;
+    }
+
+    button, .order-button {
+        width: 90%;
+        max-width: 250px;
+        font-size: 0.75rem;
+        padding: 12px 20px;
+    }
+
+    footer {
+        height: 180px;
+        padding-top: 120px;
+        font-size: 1rem;
+    }
+
+    .footer-wave {
+        height: 50px;
+        margin-bottom: 10px;
+    }
+}

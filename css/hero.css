@@ -148,9 +148,9 @@
 	.cherry-icon {
 		left: 20px;
 	}
-	.cherry-icon-two {
-		display: none;
-	}
+	/*.cherry-icon-two {*/
+	/*	display: none;*/
+	/*}*/
 }
 
 .underline-icon {
@@ -341,9 +341,9 @@
 		top: -76px;
 		width: 100px;
 	}
-	.cherry-icon-two {
-		display: none;
-	}
+	/*.cherry-icon-two {*/
+	/*	display: none;*/
+	/*}*/
 
 	/* Faded cover effect for left image */
 	.left-side-image,
@@ -366,25 +366,54 @@
 }
 
 /* Mobile Phones (max-width: 768px) */
-@media (max-width: 768px) {
+@media (max-width: 794px) {
+	section#home.hero{
+		margin-top: 100px;
+	}
 	.hero {
-		background-position: center 95%;
-		height: auto; /* Adjust height based on content */
+		background-position: bottom center;
+		height: 90vh;
+		padding: 0;
 	}
 	header {
 		padding: 10px 16px;
 	}
 	.hero-title {
-		font-size: 2.2rem;
+		max-width: 95%;
 	}
-
+	.hero-buttons {
+		flex-direction: row;
+	}
+	.cherry-icon {
+		left: -23px;
+		top: -66px;
+		width: 100px;
+	}
 	.cherry-icon-two {
 		position: absolute;
-		right: -46px;
+		right: -30px;
 		top: 44px;
 		width: 80px;
 	}
+
+	.left-side-image,
+	.right-side-image {
+		display: block;
+		max-width: 150px;
+		opacity: 0.35;
+		filter: blur(1px);
+		mix-blend-mode: multiply;
+		transition: opacity 0.3s ease;
+		z-index: 0;
+	}
+
+	.left-side-image img,
+	.right-side-image img {
+		width: 100%;
+		object-fit: cover;
+	}
 }
+
 
 /*!* Small Desktop (min-width: 1022px and max-width: 1240px) *!*/
 /*@media (min-width: 1022px) and (max-width: 1240px) {*/

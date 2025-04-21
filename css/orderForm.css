@@ -226,20 +226,77 @@ form button:hover {
     }
 }
 
-@media (max-width: 480px) {
+@media (min-width: 300px) and (max-width: 460px) and
+(min-height: 740px) and (max-height: 932px)  {
+
     .order-container {
-        padding: 10px;
+        flex-direction: column;
+        padding: 15px;
+        gap: 16px;
+    }
+
+    .order-form {
+        padding: 18px;
     }
 
     .section-title {
-        font-size: 26px;
+        font-size: 24px;
     }
 
     .order-title {
         font-size: 18px;
     }
 
+    .payment-options {
+        gap: 10px;
+    }
+
+    .payment-options label {
+        width: 48%;
+        min-height: 130px;
+        font-size: 13px;
+        padding: 10px;
+    }
+
     .payment-options img {
-        width: 40px;
+
+        width: 36px;
+        height: 36px;
+    }
+
+    .payment-options span {
+        font-size: 12px;
+    }
+    .payment-options input[type="radio"] {
+        display: none;
+    }
+
+    input, select, textarea {
+        font-size: 15px;
+        padding: 10px;
+    }
+
+    form button {
+        font-size: 15px;
+        padding: 16px;
+    }
+
+    .image-section {
+        padding: 10px;
+    }
+
+    .image-placeholder img {
+        max-width: 100%;
+        border-radius: 6px;
+    }
+
+    .remove-pie {
+        font-size: 13px;
+        padding: 6px 10px;
+        margin: 5px 0;
+    }
+
+    .note, .contact-info {
+        font-size: 13px;
     }
 }

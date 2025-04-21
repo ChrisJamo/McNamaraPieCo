@@ -109,8 +109,8 @@
 }
 
 /** Mobile */
-@media (min-width: 400px) and (max-width: 450px) and
-(min-height: 850px) and (max-height: 1000px) {
+@media (min-width: 300px) and (max-width: 460px) and
+(min-height: 740px) and (max-height: 932px) {
 
     .testimonial-card {
         width: 220px;

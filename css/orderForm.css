@@ -259,6 +259,7 @@ form button:hover {
     }
 
     .payment-options img {
+
         width: 36px;
         height: 36px;
     }
@@ -285,7 +286,7 @@ form button:hover {
     }
 
     .image-placeholder img {
-        max-width: 90%;
+        max-width: 100%;
         border-radius: 6px;
     }
 

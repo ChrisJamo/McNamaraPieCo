@@ -21,7 +21,7 @@ body {
     margin-top: -20px; /* ← pulls everything up slightly */
 }
 
-/* Spoon image top-right BASSAM!!!!!!!!!!!!!!!!!!!! */
+/* Spoon image top-right */
 .spoon {
     position: absolute;
     top: -145px;
@@ -47,8 +47,8 @@ body {
     position: relative;
     top: 60px;
     margin-left: -100px;
-    padding-top: 5px; /* add space above */
-    padding-bottom: 40px; /* add space below */
+    padding-top: 5px; /* added space above */
+    padding-bottom: 40px; /* added space below */
     display: inline-block;
 }
 
@@ -60,7 +60,7 @@ body {
     background: #5a2a6f;
 }
 
-/*! Heading stays near the top !*/
+/*! Heading stays near the top */
 .about-title {
     font-size: 2.5rem;
     color: #5a2a6f;
@@ -102,7 +102,7 @@ body {
     margin-top: 20px;
 }
 
-/* Footer BASSAM!!!!!!!!!!!!!!!!!!!! */
+/* Footer */
 .footer {
     position: absolute;
     bottom: 0;
@@ -134,13 +134,13 @@ body {
 
 @media (max-width: 768px) {
     .content-wrapper {
-        flex-direction: column-reverse; /* 🔁 flip the order (text first, image second) */
+        flex-direction: column-reverse; /* Flip the order (text first, image second) */
         align-items: center;
         padding: 40px 20px;
     }
 
     .profile-pic {
-        margin-top: 70px; /* ⬅️ Adjust this number to move the image further down */
+        margin-top: 70px; /* Adjusted this number to move the image further down */
         margin-bottom: 10px;
         margin-left: 0;
         top: 0;
@@ -149,7 +149,7 @@ body {
 
     .profile-pic img {
         max-width: 80%;
-        display: inline-block; /* ✅ Ensures image respects text-align */
+        display: inline-block; /* Ensured image respects text-align */
     }
 
     .about-text {
@@ -172,7 +172,7 @@ body {
     }
 
     .spoon {
-        display: none; /* 🚫 hide the spoon image entirely on mobile */
+        display: none; /* Hid the spoon image entirely on mobile */
     }
 
     .profile-pic img {
@@ -185,7 +185,7 @@ body {
         top: 0;
     }
 
-    /* BASSAM!!!!!!!!!!! Fixed Responsive Perfectly! */
+    /* Fixed Responsive Perfectly! */
     .footer-text {
         font-size: 0.85rem;  /* even smaller if needed */
         margin-top: 40px;  /* reduce space */

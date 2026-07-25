@@ -19,7 +19,7 @@ html, body {
 header {
     text-align: center;
     position: relative;
-    top: -80px; /* Adjust this value until it hugs the top nicely */
+    top: -80px; /* Adjusted this value until it hugs the top nicely */
 }
 
 /* Top row with left/right pies */
@@ -29,10 +29,10 @@ header {
     margin-bottom: 0;
 }
 
-/* BASSAM!!!!!!!!!! Fixed height size of pies on the left/right. */
+/* Fixed height size of pies on the left/right. */
 .side-pies {
     position: fixed;
-    top: 0; /* ✅ puts the images at the very top of the page */
+    top: 0; /* puts the images at the very top of the page */
     height: 65px;
     z-index: 1;
 }
@@ -47,14 +47,14 @@ header {
     left: 0;
 }
 
-/* Pie icon between headings BASSAM!!!!!!!!!!!!!!!!!! FIXED PIE SIZING. */
+/* Pie icon between headings. FIXED PIE SIZING. */
 .center-pie-icon {
     width: 300px;
     margin: 10px auto;
     display: block;
 }
 
-/* Headings BASSAM!!!!!!!!!!!!!!!!!! FIXED TITLE SIZING. */
+/* Headings - FIXED TITLE SIZING. */
 h1 {
     font-size: 2.4rem;
     margin: 0;
@@ -62,7 +62,7 @@ h1 {
     color: #49256c;
 }
 
-/* BASSAM!!!!!!!!!!!!!!!!!! FIXED TITLE SIZING. */
+/* FIXED TITLE SIZING. */
 h2 {
     font-weight: 400;
     font-size: 1.6rem;
@@ -85,7 +85,7 @@ form {
     flex-wrap: wrap;
     padding: 10px;
     gap: 30px;
-    margin-top: -20px; /* 👈 Add this line to push the quiz down */
+    margin-top: -20px; /* Added this line to push the quiz down */
     margin-left: 25px;
     color: #4e2a84;
 }
@@ -109,7 +109,7 @@ select {
     color: #3a2d45;
 }
 
-/* Labels for dropdowns BASSAM!!!!!!!!!!!!!!! Increased font size for quiz questions. */
+/* Labels for dropdowns. Increased font size for quiz questions. */
 label {
     display: flex;
     flex-direction: column;
@@ -159,24 +159,24 @@ input[type=range]::-webkit-slider-thumb {
     font-size: 1.2rem;
 }
 
-/* Button Layout BASSAM!!!!!!!!!! Fixed button positioning. */
+/* Button Layout - Fixed button positioning. */
 .button-container {
     text-align: center;
     margin-top: 10px;
     margin-left: -20px; /* 👈 Nudge left — adjust value as needed */
 }
 
-/* Buttons BASSAM!!!!!!!!! CHANGED FONT SIZE ON BUTTONS. */
+/* Buttons - CHANGED FONT SIZE ON BUTTONS. */
 button {
     padding: 15px 25px;
     margin: 10px;
-    width: 200px; /* 👈 Make all buttons the same width */
+    width: 200px; /* Made all buttons the same width */
     border-radius: 20px;
     border: 1px solid #5e437d;
     background-color: #e3d6f4;
     color: #5e437d;
     font-weight: bold;
-    font-size: 0.8rem; /* 👈 Add this to increase button text size */
+    font-size: 0.8rem; /* Added this to increase button text size */
     cursor: pointer;
     transition: all 0.3s ease;
 }
@@ -186,7 +186,7 @@ button:hover {
     color: white;
 }
 
-/* Order Now Button BASSAM!!!!!!!! FIXED FONT SIZE. */
+/* Order Now Button - FIXED FONT SIZE. */
 .order-button {
     background-color: #3f2d5c;
     color: white;
@@ -200,7 +200,7 @@ button:hover {
     margin-top: 10px;
 }
 
-/* Clean up spacing from hidden result */
+/* Cleaned up spacing from hidden result */
 .hidden {
     display: none;
     height: 0;
@@ -208,7 +208,7 @@ button:hover {
     padding: 0;
 }
 
-/* Footer Styling BASSAM!!!!!!!!!!!!!!! Footer text size changed from 1.2rem to 1.4rem. */
+/* Footer text size changed from 1.2rem to 1.4rem. */
 footer {
     background: url("../public/Images/ImagesForMcNamaraPieQuizFinalVersion/BackgroundQuiz.jpg") no-repeat center bottom;
     background-size: 100% auto;
@@ -218,8 +218,8 @@ footer {
     font-size: 1.4rem;
     color: #4d3e5e;
     flex-shrink: 0;
-    height: 340px;         /* ⬅️ increase height to fit the wave fully */
-    padding-top: 200px;    /* ⬅️ moves text up to make room for the wave */
+    height: 340px;         /* increased height to fit the wave fully */
+    padding-top: 200px;    /* moved text up to make room for the wave */
     box-sizing: border-box;
 }
 
@@ -230,7 +230,7 @@ footer {
     display: block;
 }
 
-/* Responsive Design BASSAM!!!!!!!!!!! Edited Responsive Here. */
+/* Responsive Design - Edited Responsive Here. */
 /* Hide side pies on smaller screens */
 @media (max-width: 768px) {
     .side-pies {
@@ -263,18 +263,18 @@ footer {
     }
 
     label {
-        font-size: 1.1rem; /* ensure consistency on smaller screens */
+        font-size: 1.1rem; /* ensured consistency on smaller screens */
     }
 
     footer {
-        padding-top: 180px;  /* ⬅️ was 280px, now raised */
+        padding-top: 180px;  /* was 280px, now raised */
         margin-top: 20px;
         font-size: 1.2rem;
-        height: 205px;       /* ⬅️ was 340px, now raised */
+        height: 205px;       /* was 340px, now raised */
     }
 
     .footer-wave {
-        margin-bottom: 30px; /* ⬅️ was 80px, now tighter */
+        margin-bottom: 30px; /* was 80px, now tighter */
     }
 }
 /* Responsive Design: Between 400–450px wide and 850–1000px tall */

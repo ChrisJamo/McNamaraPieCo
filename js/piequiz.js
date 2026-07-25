@@ -48,7 +48,7 @@ function calculatePie() {
     const taste = form["taste"].value;
     const whipped = parseInt(document.getElementById("whipped-slider").value);
 
-    // ✅ Validation: Ensure all fields are answered
+    // Validation: Ensure all fields are answered
     if (
         comfort === "" ||
         mood === "" ||
@@ -91,7 +91,6 @@ function calculatePie() {
         piePoints["Cherry Pie"] += 3;
     }
 
-    // BASSAM - ADD THIS.
     if (ingredient === "coconut") {
         piePoints["Coconut Cream Pie"] += 5;
     }
@@ -110,13 +109,11 @@ function calculatePie() {
         piePoints["Coconut Cream Pie"] += 2;
     }
 
-    // BASSAM - ADD THIS.
     if (comfort === "sticky") {
         piePoints["Salted Caramel Apple Pie"] += 3;
         piePoints["Pecan Pie"] += 2;
     }
 
-    // BASSAM - ADD THIS TOO.
     if (ingredient === "citrus") {
         piePoints["Lemon Meringue Pie"] += 5;
         piePoints["Key Lime Pie"] += 5;
@@ -152,7 +149,6 @@ function calculatePie() {
     document.getElementById("result").classList.remove("hidden");
 }
 
-// BASSAM!!!!!!!!!!! I FIXED THIS.
 function orderPie(event) {
     event.preventDefault(); // prevent form from submitting and reloading
 
@@ -164,7 +160,7 @@ function orderPie(event) {
     }, 100);
 }
 
-// ✅ Exit button functionality - BASSAM!!!!!!!! THIS EXIT BUTTON SHOULD BRING YOU BACK TO INDEX.HTML.
+// THIS EXIT BUTTON SHOULD BRING YOU BACK TO INDEX.HTML.
 function exitQuiz() {
     window.location.href = "index.html";
 }
